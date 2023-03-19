@@ -1,0 +1,3 @@
+var nombre = "Tabare";
+// console.log (nombre);
+console.log("archivo2s");
