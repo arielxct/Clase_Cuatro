@@ -1,3 +1,5 @@
-var nombre = "Tabare";
-// console.log (nombre);
+var nombreDos = "Tabare";
+console.log (nombreDos);
 console.log("archivo2s");
+var numero = 50;
+console.log(numero);
