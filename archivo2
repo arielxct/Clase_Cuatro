@@ -1,0 +1,7 @@
+var nombreDos = "Tabare";
+console.log (nombreDos);
+console.log("archivo2s");
+var numero = 50;
+console.log(numero);
+var cachorro = "Juan";
+var cachorro2 = "Mia";

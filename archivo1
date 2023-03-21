@@ -1,0 +1,8 @@
+var nombre = "Ariel";
+console.log (nombre);
+console.log("archivo1");
+var arbol = "Alamos";
+console.log("arbol");
+var planta = "Potus";
+var planta2 = "Dolar";
+
