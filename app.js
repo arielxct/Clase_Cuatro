@@ -3,3 +3,4 @@ var nombre = "Ariel";
 var ciudad = "Buenos Aires";
 var provincia = "Rio Negro";
 var barrio = "Palermo";
+var rio = " Carapachay";
