@@ -6,4 +6,5 @@ console.log("arbol");
 var planta = "Potus";
 var planta2 = "Dolar";
 var planta3 = "Lazo de amor";
+console.log (" Archivo1");
 

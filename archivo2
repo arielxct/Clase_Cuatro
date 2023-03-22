@@ -1,8 +1,9 @@
 var nombreDos = "Tabare";
 console.log (nombreDos);
-console.log("archivo2s");
+// console.log("archivo2");
 var numero = 50;
 console.log(numero);
 var cachorro = "Juan";
 var cachorro2 = "Mia";
 var cachorro3 = "Ivan";
+console.log (" Archivo2");
