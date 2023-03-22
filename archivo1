@@ -7,4 +7,6 @@ var planta = "Potus";
 var planta2 = "Dolar";
 var planta3 = "Lazo de amor";
 console.log (" Archivo1");
-
+const ariel = ["Palermo","San Luis","Rio Negro"]; // creo un array
+module.exports = ariel ;// lo exporto
+console.log(ariel); // muestro en la terminal el array para saber si esta bien escrito
