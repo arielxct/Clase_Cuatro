@@ -31,7 +31,16 @@ let concesionario = {
         return listaDeAutosParaVenta;
     },
     
-   
+   /*
+    autosParaLaVentaDiego: function (){
+
+        let autos = this.autos
+        let autosEnVenta = autos.filter(function(auto){
+         return auto.vendido == "En venta"
+        })
+        return autosEnVenta
+    },
+    */
     // ETAPA 5 - LISTA DE AUTOS VENDIDOS, DINERO GENERADO , FUNCIONALIDAD "ListaDeVentas"
     listaDeVentas(){
          let listaDeAutosVendidos = autos.filter(vendidos=>vendidos.venta == "Vendido");
@@ -105,8 +114,9 @@ let concesionario = {
 
 // console.log( concesionario.buscarAuto("JJK116")); // Etapa 2
 // console.log( concesionario.venderAuto("JJK116")); // Etapa 3
-// console.log( concesionario.autosParaLaVenta()); // Etapa 4
+  // console.log( concesionario.autosParaLaVenta()); // Etapa 4
+ //console.log( concesionario.autosEnVenta()); // Etapa 4
+
 //console.log (concesionario.listaDeVentas()); // Etapa 5
 // console.log (concesionario.totalDeVentas()); // Etapa 6
 console.log(concesionario.listaPorVender("JJK116", "Juan")); // Etapa 7
-

@@ -9,7 +9,7 @@ var autos = [
         color: "Azul",
         año : "2019",
         kilometraje: "200",
-        precio: 150000,
+        precio: 80000,
         cuotas: 12,
         patente:"APL123",
         venta:"En venta",
