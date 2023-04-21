@@ -1,6 +1,6 @@
 // LISTA DE TODOS LOS AUTOS DE LA CONCESIONARIA.
 /* Uso un Array "autos", y dentro del el creo tantos objetos como autos tenga la concesionaria. 
-Puse 4 autos, dos "en venta" y dos "vendidos", para ampliar los ejemplos*/
+Puse 4 autos, tres "en venta" y dos "vendidos", para ampliar los ejemplos*/
 
 var autos = [
     {
@@ -46,6 +46,17 @@ var autos = [
         cuotas: 14,
         patente:"DVS654",
         venta:"Vendido" ,
+    },
+    {
+        marca : "Audi",
+        modelo: "C3",
+        color: "Plateado",
+        año : "2018",
+        kilometraje: "45000",
+        precio: 250000,
+        cuotas: 12,
+        patente:"AUD123",
+        venta:"En venta" ,
     },
 
 ]

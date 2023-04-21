@@ -51,56 +51,52 @@ let concesionario = {
         return montoVendido;
     },
     // ETAPA 7 - desarrollar funcion "puedeComprar"
+    /* Es por esto que María te pide que desarrolles la función "puedeComprar" que reciba por parámetro
+     un auto y una persona y devuelva true si la misma puede comprar el auto.
+    */
     listaPorVender(patenteAuto,persona){
         
-        console.log (patenteAuto);
-        console.log (persona);
+        
         let listaDeAutosPorVender = autos.filter(vendidos=>vendidos.venta == "En venta");
-        console.log ("listaDeAutosPorVender");
-        console.log (listaDeAutosPorVender);
-        let autoBuscadoParaVenta = listaDeAutosPorVender.filter(laPatente=>laPatente.patente == (patenteAuto));
-        console.log("autoBuscadoParaVenta ");
-        console.log(autoBuscadoParaVenta);
-        console.log("precio del auto-------------------");
-        console.log(autoBuscadoParaVenta[0].precio);
-
-        let busquedaCliente = clientes.filter(nombreCliente=>nombreCliente.nombre == (persona));
-       // let busquedaCliente = clientes.filter(nombreCliente=>nombreCliente.nombre == "Juan");
-        console.log ("busquedaCliente ");
-        console.log (busquedaCliente);
-        console.log(busquedaCliente[0].capacidadDePagoTotal);// ok bien 
-
-         let capacidadDePagoTotal = busquedaCliente[0].capacidadDePagoTotal; 
+        let autoBuscadoParaVenta = listaDeAutosPorVender.filter(laPatente=>laPatente.patente == (patenteAuto)||false);
         
+        if(autoBuscadoParaVenta == false){
+           //  console.log ("El auto NO está a la venta");
+            return false;
+            
+        }else {
+            // console.log ("el auto SI esta a la venta ");
+            
+        }
 
-        console.log("capacidadPagoTotal ");
-        console.log( capacidadDePagoTotal);// capacidadDePagoTotal
-        
+        let busquedaCliente = clientes.filter(nombreCliente=>nombreCliente.nombre == (persona)||false);
+        if(busquedaCliente == false){
+                // console.log ("Nombre del cliente no existe");
+        return false;
+        }else {
+             // console.log ("Nombre del cliente existe ");
+         }
+              
+        let capacidadDePagoTotal = busquedaCliente[0].capacidadDePagoTotal; 
+         
         let capacidadPagoCuotas = busquedaCliente[0].capacidadDePagoEnCuotas;
-        console.log("capacidadPagoCuotas ");
-        console.log(capacidadPagoCuotas);
-
-        if(autoBuscadoParaVenta[0].precio<= capacidadDePagoTotal){
-            console.log ("aprobado total");
+         if(autoBuscadoParaVenta[0].precio<= capacidadDePagoTotal){
+            
             if ((autoBuscadoParaVenta[0].precio/autoBuscadoParaVenta[0].cuotas)<=capacidadPagoCuotas){
-                console.log("aprobado cuotas");
+                // console.log("aprobado cuotas");
                 return true;
             }else {
-                console.log("no en cuotas");
+                // console.log("no en cuotas");
                 return false;
             };
             
             } else {
-                console.log("no en total")
+                // console.log("no en total")
                 return false;
             };
 
         }
-        
-   
-   
-       
-      
+     
 }
 
 // console.log( concesionario.buscarAuto("JJK116")); // Etapa 2
@@ -108,5 +104,5 @@ let concesionario = {
 // console.log( concesionario.autosParaLaVenta()); // Etapa 4
 //console.log (concesionario.listaDeVentas()); // Etapa 5
 // console.log (concesionario.totalDeVentas()); // Etapa 6
-console.log(concesionario.listaPorVender("JJK116", "Juan")); // Etapa 7
+console.log(concesionario.listaPorVender("JJK116", "Ramon")); // Etapa 7
 
