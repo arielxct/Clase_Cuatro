@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+</head>
+<body>
+    <main>
+        <h1>Selectores CSS</h1>
+        <article>
+            <section id="descripcion">
+                <p>Los selectores Son una parte primordial de la estructura de los estilos CSS, en si son el secmento de codigo dedicado a indicar a que alemento o elementos HTML se aplicaran los estilos, existen diversos tipos de selectores cada uno con sus propias caracteriticas.</p>
+            </section>
+            <section>
+                <h2>Tipos de Selectores</h2>
+                <dl>
+                    <dt id="universal"><h3>Selector Universal</h3></dt>
+                    <dd>
+                        <p>Este selector indica que las propiedades pertenecientes a este se aplicaran a todos los elementos del documento, es decir es un Selector de uso global, se define con el uso del <b>"asterisco (*)"</b>, de la siguuiete forma:</p>
+                        <img src="./img/SelectorUniversal.PNG" alt="">
+                    </dd>
+                    <dt id="tipo"><h3>Selector por Tipo de Elemento</h3></dt>
+                    <dd>
+                        <p>En este caso en el selector se ingresa directamente el tipo de elemento HTML procediendo así a aplicarse los estilos CSS en cuestión a todos los elemetos de este mismo tipo que se encuentren en el docuemnto HTML.</p>
+                        <p>De esta Forma:</p>
+                        <img src="./img/SelectorTipo.PNG" alt="">
+                    </dd>
+                    <dt id="clase"><h3>Clases</h3></dt>
+                    <dd>
+                        <p>Las clases cuentan con la ventaja de poder elejir a cual elemento se le aplicaran los estilos, sin importar de que tipo se trate, siempre y cuando esta se vincule correctamente a este, por lo tanto al utilizar un selector de tipo clase los estilos unicamente se aplicaran a los eslemtos que realisen el llamdo a la clase con el uso del atributo <b>"class"</b> con nombre de dicha clase por valor, sin importar cual sea el tipo de estos elemetos ni el numero de veces que la clase sea llamada. </p>
+                        <p>De esta  forma:</p>
+                        <img src="./img/SelectorClase.PNG" alt="">
+                        <p>Por otro lado desde el documento de estilos CSS la clase se define utilizando un <b>"punto" (.)</b> seguido del nombre de esta, de la siguiente forma:</p>
+                        <img src="./img/SelectorClase2.PNG" alt="">
+                    </dd>
+                    <dt id="id"><h3>Id</h3></dt>
+                    <dd>
+                        <p>Recordemos que los <b>"id"</b> son identificadores unicos de cada elemento, por lo tanto al utilizarlos como selector estamos indicando que los estilos se aplique espesificamente al elemento que posea dicho id, por lo tanto es necesario que el elemento HTML posea declarado un id en el atributo <b>"id"</b> de la siguiete forma: </p>
+                        <img src="./img/SelectorId1.PNG" alt="">
+                        <p>Por el lado del documento de estilos CSS los id se declaran con un <b>"hashtag (#)"</b> seguido del id correspondiente:</p>
+                        <img src="./img/SelectorId2.PNG" alt="">
+                    </dd>
+                    <dt id="atributo"><h3>Atributo</h3></dt>
+                    <dd>
+                        <p>En CSS tambien se pueden utilizar los atributos de un elemento HTML como selectores, para hacerlo indicarlo es necesario incluir tanto el atributo en cuestion como su valor dentro de <b>"corchetes ([])"</b>, incluyendo los simbolos (=) y las comillas ("" o '') de la siguete forma:</p>
+                        <img src="./img/SelectorAtributo2.PNG" alt=""><br>
+                        <img src="./img/SelectorAtributo1.PNG" alt="">
+                        <p><b>Nota: Realmente esta tecnica no solo se puede utilizar con los atributos si no que realmente se puede aplicar con cualquier texto que se encuentre en el interior de la biñeta de apertura de un elemento sin importar si cimple con el formato de un atributo o si es algo de propia autoria.</b></p>
+                    </dd>
+                    <dt id="desendientes"><h3>Desendientes</h3></dt>
+                    <dd>
+                        <p>Este tipo de selector tiene una particularidad, se trata de aplicar un condicional a los elementos seleccionados, por lo tanto los estilos se aplicaran a los elementos que cumplan estas condiciones, las cuales consisten en los elementos padres de los alementos en cuestión, es decir estos estilos se aplicaran a aquellos elementos de un tipo en particular que se encuentre dentro de otro elemento preestablecido, de la siguienteforma: </p> 
+                        <img src="./img/SelectorDesendientes1.PNG" alt="">
+                        <p>Como se puede ver en la imagen este ejemplo se basa en un parrafo que se enceuntra dentro de un h2, en este tipo de casos es cuandose aplican los selectores decendientes, ya que se tiene en cuenta tanto al contenedor como al elemtos hijo de la siguiente forma:</p>
+                        <img src="./img/SelectorDesendientes2.PNG" alt="">
+                        <p>Como se puede observar en el ejemplo primero se coloca el elemento padre seguido del alemento hijo, de esta forma a los elemtos que cumplan con el condicional "parrafos dentro de un h2" se les aplicaran los estilos en cuestión.</p>
+                    </dd>
+                    <dd>
+                        <h4>Otro caso de los Selectores Desendientes</h4>
+                        <p>Otra alternativa es aplicar una variante de la condicional, en vez de definir el tipo del elemento padre tambien se puede defir una caracteritica de este, en este caso una clase que este posea como en el siguite ejemplo:</p>
+                        <img src="./img/SelectorDesendientes3.PNG" alt="">
+                        <p>Como se puede ver en este ejemplo el elemento h2 en el que se encuentra el parrafo posee la clase "h2-class", por lo tanto cumpliria con la condicional definida a continuación:</p>
+                        <img src="./img/SelectorDesendientes4.PNG" alt="">
+                        <p>En este ultima imagen se definiria: en aquellos parrafos que se encuentren dentro de  elementos que posean la clase "h2-class" se aplicaran los estilos en cuestión. </p>
+                        <p><b>Nota: esto no se detiene allí, se puede aplicar más nives, por ejemplo en el caso de que dentro del parrafo se encontrara un alemento <b>"span" este se podria definir perfectamente ubicando a la izquierda de <b>"p"</b> en la estructura del codigo CSS</b> resultando en un condicona semaejante a: aplica estos estilos entodos aquellos "span" que se encuentren dentro de un parrafo dentro de un h2 o dentro de un elemento con la clase "h2-class"</b></p>
+                    </dd>
+                    <dt id="first-child"><h3>:first-child</h3></dt>
+                    <dd>
+                        <p>Se utiliza en los casos en que una <b>clase</b> se utiliza en repertidos elementos del mismo tipo de un mismo contenedor, su función se trata de una forma de aplicar un estilo unicamete al primer elemento, es decir, por ejemplo si se diese  el caso de un formulario con multiples <b>input</b> el selector <b>first-child</b> permite selecionar unicamte al primer elemento de todos para aplicarle un estilo indibidual.</p>
+                        <p>La estructura de este selector consiste en el selector del contenedor en cuestion (puede ser el id, la clase, o el tipo de elemento), seguido de dos puntos (:) y el valor <b>first-child</b> de la siguente forma: </p>
+                        <img src="./img/first-child.PNG" alt="">
+                    </dd>
+                    <dt id="nth-child()"><h3>:nth-child()</h3></dt>
+                    <dd>
+                        <p>Este tipo de selector es complementario a <b>first-child</b>, simplemete con la diferencia de que permite seleccionar cualquiera de los elementos repetidos para aplicarle los estilos particulares, la estructura de esta propiedad es similar a la de <b>first-child</b>,primero se ingresa el selector del contnedor en cuanestion,  (puede ser el id, la clase, o el tipo de elemento), seguido de dos puntos (:) y el valor <b>nth-child</b>, seguido inmediantamete por el numero entre paretensis del elemento que se desea seleccionar, como se puede apreciar en el siguiente ejemplo: </p>
+                        <img src="./img/nth-child.PNG" alt="">
+                        <p><b>Nota: La numeración de los elementos es definida por el orden de estos en el codigo HTML.</b></p>
+                    </dd>
+                    <dt id="last-child"><h3>:last-child</h3></dt>
+                    <dd>
+                        <p>Este selector es el opuesto de <b>first-child</b>, ya que en vez de seleccionar al primer elemento este selecciona el ultimo, fuera de eso no existe una verdadera diferencia en el efecto o en la sintaxis de esta porpiedad con <b>first-child</b>.</p>
+                        <img src="./img/last-child.PNG" alt="">
+                    </dd>
+                    <dt id=":valid">:valid</dt>
+                    <dd>
+                        <p>Este tipo de selector selecciona los elementos <b>input</b> que posean un valor valido.</p>
+                        <p>Un ejmplo de uso de este selector es aplicar un estilo en espesifico cuando el usuario ingrese un valor valido en un <b>input</b> de un formulario. </p>
+                        <img src="img/SelectorValid.PNG" alt="">
+                    </dd>
+                </dl>
+                <p><b>Existen más alternativas de selectores, sin embargo estas son las basicas y más utilizadas, aún así es necesario esta es una <a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank"> lista completa de selectores</a> </b></p>
+                <div>
+                    <h3>Pseudo-Clases y pseudo elementos</h3>
+                    <p>Existen otros tipos de selectores con funciones paeticulares, no obstante son recursos CSS lo bastante extensos y importantes como para merecer su propio apartado, razon por lo cual se desengolsan en los apartados de <a href="./pseudoElementos.html"> <b>Pseudo-Elementos</b></a> y <a href="./pseudoClases.html"><b>Pseudo-Clases</b></a> respectibamente.</p> 
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

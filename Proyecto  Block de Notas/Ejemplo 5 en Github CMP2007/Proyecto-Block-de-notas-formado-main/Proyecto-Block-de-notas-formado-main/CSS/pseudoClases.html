@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Clases</title>
+</head>
+<body>
+    <main>
+        <h1>Pseudo-Clases</h1>
+        <article>
+            <section>
+                <p>Se tratan de estilos CSS que se activan en base a los elementos que se desencadenen debido a la interacción del usuario, en su son muy similares a los <b>pseudo-elementos</b>, por supuesto con ciertas diferencias, Las diferentes <b>pseudo-clases</b> son:</p>
+                <p><b>Nota: Las pseudo clases se indican, con el selector del elemento seguido de dos puntos (:) y del nombre de la pesudo-clase</b></p>
+                <dl>
+                    <dt id=":hover"><h3>:hover</h3></dt>
+                    <dd>
+                        <p>Se acciona cuando el raton se encuentra encima del elemento en cuestión, ese es el desencadenante de esta pseudo-clase, por lo tanto al cumplirse esta condición el elemento cambiara de estilos:</p>
+                        <h4>Ejemplo</h4>
+                        <p><b>Codigo</b></p>
+                        <img src="./img/pseudo-clasesHover.PNG" alt="">
+                        <p><b>Elemento en Reposo</b></p>
+                        <img src="./img/ejmHover1.PNG" alt="">
+                        <p><b>Se Acciona el Evento</b></p>
+                        <img src="./img/ejmHover2.PNG" alt="">
+                        <p><b>Nota: Esta pseudo-clase se puede emplear cualquier elemento a acepción de los pseudo-elementos.</b></p>
+                        <p><b>Nota: En pantallas tactiles este evento funciona cuando se clickea, ya que no es posible pasar el raton por los elementos. </b></p>
+                    </dd>
+                    <dt id=":link-Visited"><h3>:link y :visited</h3></dt>
+                    <dd>
+                        <p>En esta ocación se tratan de dos <b> pseudo-clases</b> complementrias entre si, la función de hambas consiste en modificar los estilos de una etiqueta <b>"a"</b>, diferenciandose en que:</p>
+                        <ul>
+                            <li><p><b>:link: </b> Se activa cuando el elemento <b>"a"</b> posee un link que <b>nunca haya sido visitado por el usuario</b>, y a su vez se desactiva una vez este visita la paguina por primera vez</p></li>
+                            <li><p><b>:visited: </b> En este caso se activa cuando el elemento <b>"a"</b> posee un link que <b>ya ha sido visitado con anterioridad por el usuario</b>, y de aquí en más siempre se visualizara esta <b>pseudo-clase</b> mientras un registro de alguna visita a dicha dirección exista</p></li>
+                        </ul>
+                        <p>En otras palabras <b>"link"</b> nos permite definir los estilos de aquellos enlaces en los que el usuario no haya accedido, mientras que <b>"visited"</b> nos permite aplicar otros estilos una vez esta dirección es visitada.</p>
+                        <p><b>Nota: Sobra decir que estas pseudo-clases unicamente funcionan sobre elementos "a".</b></p>
+                        <p><b>Nota: Una partucularidad de estas dos pesudo-clases es que si se aplica ciertos atributos en una de ellas puede que estos tambien se manifiesten en la otra, tal y como ocurre con padding, por que existe cierta relación entre estas.</b></p>
+                        <h3>Ejemplos</h3>
+                        <h4>:link</h4>
+                        <img src="./img/link.PNG" alt="">
+                        <h4>:visited</h4>
+                        <img src="./img/visited.PNG" alt="">
+                    </dd>
+                    <dt id=":active"><h3>:active</h3></dt>
+                    <dd>
+                        <p>En este caso la <b>pseudo-clase</b> se activa en los momentos que se <b>mantenga el clic</b> sobre el elemento, de ese modo estando <b>inactiva antes y despues de que se realise el clic</b>. </p>
+                        <p><b>Nota: Esta pseudo-clase funciona en todos los elementos.</b></p>
+                        <h3>Ejemplo</h3>
+                        <h4>Codigo</h4>
+                        <img src="./img/active.PNG" alt="">
+                        <h4>Elemento en Reposo</h4>
+                        <img src="./img/ejmactive1.PNG" alt="">
+                        <h4>Evento activo (manteniendo el clic)</h4>
+                        <img src="./img/ejmactive2.PNG" alt="">
+                    </dd>
+                    <dt id=":focus"><h3>:focus</h3></dt>
+                    <dd>
+                        <p>Esta <b>pesudo-clases</b> funciona unicamente en los elementos <b>"input"</b>, y su función es la de aplicar estilos al momento de que el input tanga el enfoque del navegador, es decir al mometo de que el input sea seleccionado se activa esta <b>pseudo-clase</b>, desactivandose una vez el <b>"input"</b> pierde el enfoque. </p>
+                        <h3>Ejemplos</h3>
+                        <h4>Codigo</h4>
+                        <img src="./img/focus.PNG" alt="">
+                        <h4>Elemento en Reposo</h4>
+                        <img src="./img/ejmFocus1.PNG" alt="">
+                        <h4>Elemento seleccionado</h4>
+                        <img src="./img/ejmFocus2.PNG" alt="">
+                    </dd>
+                    <dt id=":lang()"><h3>:lang()</h3></dt>
+                    <dd>
+                        <p>Esta peseudo-clase no es acionada en si por ningun evento, en su lugar es una función en la que se puede aplicar estilos a un elemento en base al lenguaje en el que este se encuentre, para esto se hace lo siguite: </p>
+                        <ol>
+                            <li>
+                                <p>Se define el lenguaje del elemento HTML, esto se hace usando el atributo <b>lang</b> dentro de este</p>
+                                <img src="./img/lang1.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>Luego se define la <b>pseudo-clase</b> en CSS, ingresando el lengueje al que se le aplicara el estilo</p>
+                                <img src="./img/lang2.PNG" alt="">
+                            </li>
+                        </ol>
+                        <h4>Resultado</h4>
+                        <img src="./img/ejmLang.PNG" alt="">
+                        <b><p>Nota: Esto funciona similar a un selector de atributo.</p></b>
+                        <p><b>Nota: Actualmente el uso de lang es bastante bajo.</b></p>
+                    </dd>
+                </dl>
+                <div>
+                    <h2>Extra:</h2>
+                    <p>En CSS tambien es posible mificar los estilos de un elemento o clase cuando se desencadena un evento en otro, en CSS este tipo de declaración se aplica de la siguite forma: </p>
+                    <img src="./img/hover.PNG" alt="">
+                    <p>En este ejemplo se declara que cuando el raton se posicione encima del elemento con la clase <b>.nav_li</b> se modifiquen los estilos del elemento <b>"a".</b></p>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proiedades de diseño</title>
+</head>
+<body>
+    <main>
+        <h1>Propiedades de diseño</h1>
+        <article>
+            <section>
+                <p>Se trata de todas aquellas propiedades enfocadas a añadir mayor complejidad a los estilos CSS</p>
+            </section>
+            <section>
+                <h2>Propiedades</h2>
+                <dl>
+                    <dt id="background"><h3>Background</h3></dt>
+                    <dd>
+                        <p>Esta propiedad esta especializada en definir las caracteristicas del fondo de la paguina, para ajustarse a cualquier situación cunesta con una serie de bariantes las cuales son:</p>
+                        <dl>
+                            <dt><h3>background-color</h3></dt>
+                            <dd>
+                                <p>Esta propieddad permite definir el color del fondo de la paguina web, Esta propiedad acepta multiples formatos de color colo lo son:</p>
+                                <ul>
+                                    <li>Palabras clave</li>
+                                    <li>Colores del sistema</li>
+                                    <li>RGB hexadecimal</li>
+                                    <li>RGB numérico</li>
+                                    <li>RGB porcentual</li>
+                                </ul>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/background-color.PNG" alt="">
+                                <h4>Valor Inherit</h4>
+                                <p>Se trata de un valor especial de la propiedad <b>background</b>, su función es simple, este valor indica que el elemento debe <b>"heredar"</b> el color de fondo del contendor en el que se encuentra, de ese modo tanto el elemento padre como el hijo tendra exactamente el mimo color.</p>
+                                <p><b>Codigo</b></p>
+                                <img src="./img/colores-inherit.PNG" alt="">
+                                <p><b>Resultado</b></p>
+                                <img src="./img/ejmColores-inherit.PNG" alt="">
+                            </dd>
+                            <dt id="background-image"><h3>Background-image</h3></dt>
+                            <dd>
+                                <p>Esta propiedad permite el insertar una imagen en el fonde de la paguina, esta en si es la unica función de esta propiedad, para realizar esto es necesario incluir el valor <b>url</b> junto con la ruta hacia la imagen entre parentesis, de la siguiente forma:</p>
+                                <img src="img/background-image.PNG" alt="">
+                            </dd>
+                            <dt id="background-zise"><h3>Background-zise</h3></dt>
+                            <dd>
+                                <p>Esta propiedad se centra en definir las dimenciones que se le daran a la imagen traido por <b>background-image</b>, para lo cual cuanta con multiples valores:</p>
+                                <ul>
+                                    <li>
+                                        <p><b>Porcentajes: </b> De esta forma se define que la imagen ocupe un porcentaje del contenedor en el que se encuantra, puede ser declarado un unico valor que se aplicara para toda la imagen o tambien se pueden declarar dos valores diferentes, uno referente al eje <b>X</b> y otro para el eje <b>Y</b>, de la siguite manera</p>
+                                        <img src="img/background-zise.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Cover: </b> Este valor defiene que la imagen debe ajustarse a las dimenciones del contenedor parcialmte</p>
+                                        <img src="img/background-cover.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Contain: </b> Este valor define que la imagen se ajuste a las dimenciones del contendor pero manteniendo las resoluciones originales, con la peculiaridad de que en el caso de que exista espcio basio en el contenedor la imagen se repetira para llenar ese spacio.</p>
+                                        <img src="img/background-zise.2PNG.PNG" alt="">
+                                    </li>
+                                </ul>
+                            </dd>
+                            <dt id="background-repeat"><h3>Background-repeat</h3></dt>
+                            <dd>
+                                <p>Esta propiedad define el si la imagen se repetira y por lo tanto unicamte posee dos valores :</p>
+                                <ul>
+                                    <li><p><b>Repeat: </b> Define que la imagen <b>si</b> se repetira para rellenar cualqueer espacio libre en su contenedor</p></li>
+                                    <li><p><b>No-rpeat</b> Define que la imagen <b>no</b> se repetira para rrellenar el contendor en caso de que sobren espacios libres</p></li>
+                                </ul>
+                                <img src="img/background-repeat.PNG" alt="">
+                                <p><b>Nota: Esta propiedad se puede usar para que la imagen no se repita al emplear la propiedad "background-zise" con un valor "contain", de ese modo el espacio sobrante en el contenedor sera rellanado por el "background-color" que puede que se utilise en el fondo de este.</b></p>
+                            </dd>
+                            <dt id="background-clip"><h3>Background-clip</h3></dt>
+                            <dd>
+                                <p>Esta propiedad permite cortar la imagen, para definir cual sección de la imagen sera cortada, posee varios valores:</p>
+                                <ul>
+                                    <li>
+                                        <p><b>border-box: </b> Se trata del valor por defecto, recorta el area de la imagen que se encuentra en los bordes del elemento</p>
+                                    </li>
+                                    <li><p><b>padding-box; </b> Recorta el area de la imagen que se encuenta en el padding del elemento</p></li>
+                                    <li>
+                                        <p><b>content-box: </b> Recorta toda el area de la imagen que se encuentre fuera del area del contenido del elemento </p>
+                                    </li>
+                                </ul>
+                            </dd>
+                            <dt id="background-origin"><h3>Background-origin</h3></dt>
+                            <dd>
+                                <p>Esta propiedad define que las dimenciones de la imagen se ajusten para mostrarse dentro de las areas establecidas del elemento.</p>
+                                <ul>
+                                    <li>
+                                        <p><b>border-box: </b> Se trata del valor por defecto, Define que la imagen se muestre desde los bordes del elemento</p>
+                                    </li>
+                                    <li><p><b>padding-box; </b> Define que la imagen se muestre desde dentro del area del padding</p></li>
+                                    <li>
+                                        <p><b>content-box: </b>Define que la imagen se muestre unicamente desde dentro del area de contenido del elemento </p>
+                                    </li>
+                                </ul>
+                                <p><b>Nota: La diferencia entre background-clip y background-origin es que background-clip recorta la imagen, mientras que background-origin la genera desde el punto establecido.</b></p>
+                            </dd>
+                            <dt id="background-position"><h3>Background-position</h3></dt>
+                            <dd>
+                                <p>Esta propiedad permite ubicar la imagen en alguna de las cuatro esquienas del contendor o en el centro de este, para hacerlo esta propiedad necesita de dos valores, el primero referente al eje <b>X</b> y el segundo referente al eje <b>Y</b>, por lo tanto posee los valores:</p>
+                                <ul>
+                                    <li><p><b>Left top: </b> La imagen se posiciona a la izquierda y arriba</p></li>
+                                    <li><p><b>left bottom:</b> La imagen se posiciona a la izquierda y abajo</p></li>
+                                    <li><p><b>Left center:</b> La imagen se posiciona a la izquierda y el cantro</p></li>
+                                    <li><p><b>Right top: </b> La imagen se posiciona a la derecha y arriba </p></li>
+                                    <li><p><b>Right bottom: </b> La imagen se posiciona a la derecha y a abajo</p></li>
+                                    <li><p><b>Right center: </b> La imagen se posiciona a la derecha y el centro</p></li>
+                                    <li><p><b>Center top:</b> La imagen se posiciona en el cantro y arriba</p></li>
+                                    <li><p><b>Center bottom:</b> La imagen se posiciona en el centro y abajo </p></li>
+                                    <li><p><b>Center center: </b>La imagen se posiciona en el centro del contenedor</p></li>
+                                </ul>
+                                <h4>Ejemplo</h4>
+                                <img src="img/background-position.PNG" alt="">
+                            </dd>
+                            <dt id="background-attachment"><h3>background-attachment</h3></dt>
+                            <p>Esta propiedad define a que elemento tomara la imagen como referencia para ubicarse, puede ser el contendor en el que se encuenta (visualizar de forma normal) o el viewport de la paguina, en cuyo caso la imagen se ubica en el fono del viewport pero el contendor de la imagen actua como una ventana a esta.</p>
+                            <p>Esta propiedad posee dos valores posibles:</p>
+                            <ol>
+                                <li><p><b>Scroll: </b> Define que la imagen se puede desplazar y este ubicada de forma normal en su respectivo contenedor</p></li>
+                                <li><p><b>Fixed: </b> Define que la imagen se ubique anclada en el viewport y el contendor actua como una ventana que se desplaza conforme el usuario se mueve por la paguina </p></li>
+                            </ol>
+                            <img src="img/background-attachment.PNG" alt="">
+                        </dl>
+                    </dd>
+                    <dt id="cursor"><h3>Cursor</h3></dt>
+                    <dd>
+                        <p>Esta porpiedad cambiar el tipo de cursor al posicionarse sobre el elemento, se puede aplicar en cualquier <b>Pseudo-Clase</b> o propiedad con conpleta normalidad, es importante tener presente, que esta propiedad no hace que el cursor desempeque la función que pueda simbolizar, simplemente es el recurso visual.</p>
+                        <p>Por lo general los navegadore vienen por si mismos integrados con la mayoria e incluso la totalidad de tipos de cursores, aún así el listado completo de estos se puede encontrar facilmente en internet buscando <b>"lista de valor cursor CSS" o ingresando a la <a href="https://www.w3schools.com/cssref/pr_class_cursor.php" target="_blank">guía de w3schools</a></b></p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/cursor.PNG" alt="">
+                    </dd>
+                    <dt id="linear-gradient"><h3>Linear-gradient</h3></dt>
+                    <dd>
+                        <p>Esta propiedd permite definir una transición de colores para el fondo de un elemento, Una pecularioedad de esta propiedad es que no solo se trata de una propiedad si no que a su vez es un valor de la propiedad <b>color</b>, es decir para que esta propieda funcione es necesario aplicarla dentro de la propiedad <b>color</b> y allí es cuando se ingresan los diferentes parametros que esta propiedad admite, </p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/linear-gradient.PNG" alt="">
+                        <p><b>Resultado </b></p>
+                        <img src="./img/ejmLinear-gradient.PNG" alt="">
+                        <p>Los parametros que rigen esta propiedad son:</p>
+                        <ol>
+                            <li><p><b>La dirección:</b> Este valor se define con la palabra clave <b>to</b> seguido de la dirección en si (<b>left, right, top</b> y <b>bottom</b>), </p></li>
+                            <li><p><b>El color de inicio: </b> Se trata del color con el cual inicia la transición</p></li>
+                            <li><p><b>El color Final: </b> Se trata del color en el cual culmina la trancición.</p></li>
+                        </ol>
+                        <p><b>Nota: En este ejmplo el color inicial de la transición es transporente, solo que el color de fondo del contenedor es verde. </b></p>
+                    </dd>
+                    <dt id="opacity"><h3>Opacity</h3></dt>
+                    <dd>
+                        <p>Esta propiedad produce una trasparencia en el elemento en cuestión, para definir la intencidad de esta se utiliza cualquier valor entre <b>0</b> y <b>1</b>, donde <b>0</b> es completamente trasparente y <b>1</b> es completamente bicible.</p>
+                        <img src="./img/opacity.PNG" alt="">
+                        <p><b>Noa: Esta propiedd puede aceptar tantos decimaes como se desee</b></p>
+                        <p><b>Nota: una forma de abreviar los decimales en CSS es definir el valor como ".5" en vez de "0.5", ya que el navegador entiende que antes del punto corresponde un "0" </b></p>
+                    </dd>
+                    <dt id="resize"><h3>Resize</h3></dt>
+                    <dd>
+                        <p>Esta propiedad permite que el usuario pueda modificar el tamaño de algunos elementos, otros lo incluyen por defecto como por ejemplo el <b>textarea</b>, posee varios valores aplicables a aqyellos elementos que acptan esta propiedad </p>
+                        <ul>
+                            <li><p><b>Boht:</b> Perrmite que se modifique las dimenciones verticales y orizontales del elemento</p></li>
+                            <li><p><b>Vertical:</b> Unicamente permite que se modifiquen las dimenciones verticales del elemento </p></li>
+                            <li><p><b>Horizontal: </b> Unicamente permite que se modifiquen las dimenciones horizotales del elemento</p></li>
+                            <li><p><b>None: </b> Este valor desactiva por completo esta propiedad inpidiendo que se puedan modificar las dimanciones del elemento, se utiliza espesificamete en los elementos que incluyen esta propiedad por defecto</p></li>
+                        </ul>
+                    </dd>
+                    <dt id="scrollBehavior"><h3>Scroll Behavior</h3></dt>
+                    <dd>
+                        <p>Esta propiedad tiene en uso muy espesifico, para aquellos casos en los que se utilise un elemento <b>a</b> para re-diriguir al usuario hasta un elemento ubicado dentro del mismo documento (usando el simbolo "#" seguido del id del elemento), al estar declarada esta propiedad en vez de simplemte cambiar repenrtinamente la sección de la paguina que se visualiza, se realiza un desplazamiento (scroll) desde donde este ubicado el usuario hasta el elemento pautado. </p>
+                        <img src="img/scrollBehavior.PNG" alt="">
+                        <p><b>Nota: Esta propiedad debe declararse en el "body" del documento, ya que alli es donde se encuentra el scroll (el scroll es la barra de desplazamiento vertical que poseen los navegadres en el lado dercho.)</b></p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

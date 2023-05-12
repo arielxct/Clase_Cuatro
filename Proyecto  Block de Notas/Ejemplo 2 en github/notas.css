@@ -1,0 +1,90 @@
+body{
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+    background-image: url(./imagenes/deahtnote.jpg);
+}
+@media only screen and (max-width: 700px) {
+body{
+background-image: url(./imagenes/deathcelu.jpeg);
+}
+}
+.seccion-notas {
+    border-radius: 2rem;
+    background-color: rgb(7, 6, 6);
+}
+.titulo-block{
+    font-family: "Trade Winds", cursive;
+    font-size: 25px;
+}
+.nota {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(145, 145, 145);
+}
+.modal-agregar {
+    background-color: black;
+}
+.modal-editar {
+    background-color: rgba(0, 0, 0, 0.74);
+}
+.offcanvas-configuracion{
+    min-height: 300px;
+}
+.item-configuracion:hover {
+    filter: brightness(150%);
+}
+.fecha-tipo {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875em;
+    color: #6c757d;
+}
+
+
+/* ACORDION TIPO */
+/* .accordion, .option  {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius:4px 4px 0 0;
+    outline: none;
+    transition: 0.4s;
+  
+}
+.active, .accordion:hover, .option:hover {
+    background-color: rgb(176, 195, 209);
+}
+
+.panel {
+    padding: 0 18px 0 0;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.option {
+  padding: 9px 18px;
+}
+.option-add{
+    border-radius: 4px 0 0 0;
+    color: cornsilk;
+    background-color: #0d6dfd77;
+}
+.option-add:hover {
+    color: cornsilk;
+    background-color: #0d6dfdd0;
+
+}
+.btn-add {
+    border: 0;
+    background-color: #0d6dfd77;
+}
+.btn-add:hover {
+    color: cornsilk;
+    background-color: #0d6dfdd0;
+} */

@@ -105,4 +105,3 @@ let concesionario = {
 //console.log (concesionario.listaDeVentas()); // Etapa 5
 // console.log (concesionario.totalDeVentas()); // Etapa 6
 console.log(concesionario.listaPorVender("JJK116", "Ramon")); // Etapa 7
-

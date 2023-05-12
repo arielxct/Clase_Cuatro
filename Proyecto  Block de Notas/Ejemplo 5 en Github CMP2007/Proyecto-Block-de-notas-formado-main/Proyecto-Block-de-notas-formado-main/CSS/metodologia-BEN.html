@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologuía BEM</title>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Metodologuía BEM</h1>
+            <section>
+                <p>Se trata de una de las Metodologuías de estructura de estilos CSS  más conocidas a nivel mundial, la cual consiste en basar todos los estilos unicamnete en clases, para evitar problemas de <b>espesificidad</b>, por su lado a estas clases se les aplicaran ciartas pautas a la hora de definir sus nombres para que de este modo no existan errores sobre a que elemento HTML estas actuan.   </p>
+                <p>Al estructurar los nombres de las clases en la Metodologuía BEM se utiliza: </p>
+                <ol>
+                    <li><p>En primera instancia el nombre del contenedor en el que se encuantre el elemento.</p></li>
+                    <li><p>Seguido de <b>"dos pisos ( _ )"</b></p></li>
+                    <li><p>Seguido del nombre del elementos</p></li>
+                    <h4>De este modo:</h4>
+                    <img src="./img/ejmBEM1.PNG" alt="">
+                </ol>
+
+                <p>Otro caso de uso bastante probable es que un solo ducumento HTML posea varios elemtos del mismo tipo en un contenedor pero se necesite aplicar un estilo diferente a solo uno de ellos, como en el siguiente ejemplo:</p>
+                <img src="./img/ejmBEM2.PNG" alt="">
+
+                <p>Para estos casos existen dos opciones, la primea es definir dentro de CSS la pocisión del elemto de la siguiete forma:</p>
+                <img src="./img/ejmBEM3.PNG" alt="">
+
+                <p>La otra alternativa es aplicar una clase diferente para este elemento ampleando la estructura de su nombre de la siguete manera:</p>
+                <img src="./img/ejmBEM4.PNG" alt="">
+
+                <p>Como se puede ver se aplican <b>Dos barras laterales (-)</b>las cuales significan que todos los elemtos son iguales pero uno de ellos es especial, segidas de cualquier identificador que se desee, en este caso se usara la palabra "active"</p>
+                <img src="./img/ejmBEM5.PNG" alt="">
+
+                <p><b>Nota: En una paguina funcional estos estilos pueden ser alternados entre los diferentes elementos utiliando JavaScript.</b></p>
+
+                <h4>Para Concluir</h4>
+                <p>En los casos de que se trabaje con elemtos que se encuentren dentro de más de un contenedores la estructura del nombre de las clases seria las sguiete:</p>
+                <img src="./img/ejmBEM6.PNG" alt="">
+                <p><b>Nota: El doble piso unicamente se coloca despues del nombre del contenedor principal de la sección.</b></p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

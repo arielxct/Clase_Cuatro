@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.contenedor{
+    background: radial-gradient(circle, #000, rgb(68, 255, 183));
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    height: 600px;
+}
+
+.flex_caja{
+    background: linear-gradient(to bottom, transparent, #f44);;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+   flex-grow: 1;
+    flex-shrink: 1;
+}
+#h{
+    flex-shrink: 0;
+}
+
+input{
+    resize:horizontal;
+
+}
+textarea{
+    resize:none
+}
+
+
+.transform{
+    background-color: #f44;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    transition: transform 1s;
+    transform: scale(1);
+}
+.transform:hover{
+    transform: translate(200PX) scale(2);
+}
+
+
+p{
+    width: 800px;
+    margin: auto;
+    direction: rtl
+}
+
+:valid{
+    border-color: green;
+    background-color: rgb(149, 229, 142);
+}
+
+
+
+/*------ Practica filter y animation------*/
+
+
+/*filtros y estilos de los elemtos*/
+.container{
+    filter: contrast(30);
+    background-color: #fff;
+}
+
+.caja{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: red;
+    margin: 40px;
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+.caja:first-child{
+    animation: trasladar 2s alternate infinite;
+}
+
+
+/* Se crea la animación*/
+@keyframes trasladar{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(160px);
+    }
+}
+
+/*Lo qeu ocurre en esta preactica es que se crean dos elementos a los que se le aplican diferentes filtros tantos a estos como a su contenedor
+Luego se genra una animación usando la propiedad transform y la mescla de los filtros y la animación genear el efecto  deseado. */

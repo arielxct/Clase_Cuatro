@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errores Comunes</title>
+</head>
+<body>
+    <main>
+        <h1>Errores Comunes</h1>
+        <article>
+            <section>
+                <p>Este apartado se trata de un listado de los errores más comunes realizados por aprendices a la hora de desarrollar diseños en CSS.</p>
+            </section>
+            <section>
+                <h2>Erroes</h2>
+                <ol>
+                    <li>
+                        <h3>No usar exadcimal o RGB para definr los colores</h3>
+                        <p>En CSS una de las forma de definri los colores es utilizando el nombre del respectivo color, sin embargo esto no es recomendable ya que cada navegador tiene puede tener configuado un color diferente a sociado a esa palabra clave.</p>
+                        <p>Por lo tanto si bien todos los nevagadores aplicaran el mismo color la tonalidad de este puede bariar en cada uno, en algunos casos llegando a ser bastene notorio, lo que resultaria en que los diseños de la paguina se alteren segun desde cual navegador se ingrese.</p>
+                        <p>Por ello lo mejor es utilizar los formatos exadecimal, RGB o inncluso RGBa (incluye opacidad) para definir los colores, ya que son formatos estandarizados en todos los navegadores.</p>
+                        <h4>Incorrecto</h4>
+                        <img src="img/error1.PNG" alt="">
+                        <h4>Correcto</h4>
+                        <img src="img/correcto1.PNG" alt="">
+                        <h4>Correcto</h4>
+                        <img src="img/correcto2.PNG " alt="">
+                    </li>
+                    <li>
+                        <h3>No utilizar las shorthand propieties</h3>
+                        <p>Estas se tratan de propiedades con la función de simplificar el codigo permitiendo que se definan barios parametros a la vez. </p>
+                        <p>Por ejemplo, la propiedad marguin esta permite definir el efecto de:</p>
+                        <ul>
+                            <li><p><b>Margin top: </b> Margen superior</p></li>
+                            <li><p><b>Margin right: </b>Matguen derecho</p></li>
+                            <li><p><b>Margin bottom:</b> Marguen inferior</p></li>
+                            <li><p><b>Margin left:</b> Marguen izquierdo</p></li>
+                        </ul>
+                        <p>De ese modo se puede reducir el numero de lineas de codigo simplificando el propyecto y hhaciendolo más facil de mantener y leer.</p>
+                        <h4>Incorrecto</h4>
+                        <img src="img/error5.PNG" alt="">
+                        <h4>Correcto</h4>
+                        <img src="img/error4.PNG" alt="">
+                        <p><b>Nota: Es muy recomendable buscar todos los tipos de  shorthand propieties en google.</b></p>
+                    </li>
+                    <li>
+                        <h3>Selectores mal espesificados</h3>
+                        <p>A lahora de aplicar los selectores de una clase lo mejor es no utilizar selectores de más de dos clases, ya que no es necesario ser exesibamente espesifico a la hora de definirlos, a su vez tampoco se debe de ser muy poco espesifico como para aplicar los estilos a otros elemetos que no debeia.</p>
+                        <h4>Error</h4>
+                        <img src="img/error6.PNG" alt="">
+                        <h4>Correcto</h4>
+                        <img src="img/correcto7.PNG" alt="">
+                        <p></p>
+                    </li>
+                    <li>
+                        <h3>No definir fuentes parecidas</h3>
+                        <p>A la hora de definir las fuentes de una paguina lo mas recomendable es definri dos fuentes, una principal que sera la predilecta y una segundaria similar para utilizar en caso de que no se pueda acceder a la fuente primaria.</p>
+                        <p>Error consiste en que las dos fuentes seleccionadas sean diferentes o con notorias diferencias, ya que lo mejor es  que estas sean similares para mantener la estructura y estilos de la paguina.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="img/correcto8.PNG" alt="">
+                    </li>
+                    <li>
+                        <h3>No aplicar los estilos generales</h3>
+                        <p>Un error seria el definir repetidamete una propiedad para multiples elemetos, para esos casos lo mejor es simplemte declararla como una propiedad global en vez de asignarla a cada elemento.</p>
+                        <p>Si se presenta la necesidad de que algun elemento posea un valor diferente en estas propiedades allí si es correcto el definir la propiedad para equel elemeto en espesifico.</p>
+                        <h4>Error</h4>
+                        <img src="img/error7.PNG" alt="">
+                        <h4>Correcto</h4>
+                        <img src="img/correcto9.PNG" alt="">
+                    </li>
+                    <li>
+                        <h3>No posicionar correctamente los elemetos</h3>
+                        <p>En CSS existen dibersas formas de posicionar los elemetos, sin embargo algunas formas son más optimas que otras, en espesifico lo más recomendable es posicionar los elemetos utilizando <b>Grid</b> o <b>FlexBox</b>, ya que son actualmte los recursos más eficientes y potentes que ofrece CSS para posicionar elemetos.</p>
+                        <h4>Incorrecto</h4>
+                        <img src="img/error8.PNG" alt="">
+                        <h4>Correcto</h4>
+                        <img src="img/correcto10.PNG" alt="">
+                        <h4>Resultado de ambos codigos</h4>
+                        <img src="img/ejmCorrecto1.PNG" alt="">
+                    </li>
+                    <li>
+                        <h3>No Diseñar el proyecto como Responsive Desing</h3>
+                        <p>Actualmte es esencial para toda paguina web el poder adaptarse a los dibersos tipos de dispositivos, por ello este tipo de planteamiento es sumamate importante actualmente, a su vez esto es conseguido utilizando <b>Grid</b> o <b>FlexBox</b> en conjunto con <b>@media Query</b>.</p>
+                        <h4>Correcto</h4>
+                        <img src="img/ejmCorrecto2.PNG" alt="">
+                    </li>
+                </ol>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

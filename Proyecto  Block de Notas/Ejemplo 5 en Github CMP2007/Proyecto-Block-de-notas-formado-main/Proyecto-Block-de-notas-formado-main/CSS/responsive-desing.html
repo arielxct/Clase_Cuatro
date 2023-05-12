@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Desing</title>
+</head>
+<body>
+    <main>
+        <h1>Responsive Desing</h1>
+        <article>
+            <section>
+                <p>Se trata de un planteamiento de diseño en el que las paguinas web se estructuran de forma que puedan adaptarse a cualquier dispositivo desde el cual estas puedan llegar a ser visualizadas, para lo cual se aplica una serie de ptopiedades y recursos enfocados en reslover este tipo de problematicas.</p>
+                <p>Dentro del conjunto de propiedades y recursos utilizados para desarrollar el <b>responsive desing</b> se encuentran:</p>
+                <dl>
+                    <dt><b>Estructuras Flexibles</b></dt>
+                    <dd>
+                        <ul>
+                            <li>Contenedores flexibles</li>
+                            <li>imagenes flexibles</li>
+                            <li>Vidoes flexibles</li>
+                        </ul>
+                    </dd>
+                    <dt><b>Media Queries</b></dt>
+                    <dd>
+                        <p>Se usa en consultas de medios para aplicar estilos a deferentes tipos de medios o dispositivos, permitiendo ajustar los estilos de la paguina a:</p>
+                        <ul>
+                            <li>Ancho y alto de la ventana grafica</li>
+                            <li>Ancho y alto del dispositivo</li>
+                            <li>orientación del dispositivo (horizontal o vertical)</li>
+                            <li>Resulución</li>
+                        </ul>
+                    </dd>
+                    <dt><b>El caso de uso de los estilos</b></dt>
+                    <dd>
+                        <dl>
+                            <dt>All</dt>
+                            <dd>Apto para todo tipo de dispositivos</dd>
+                            <dt>print</dt>
+                            <dd>Destinado a material inpreso y la visualización de documentos en una pantalla de modo de vista previa de inpresión</dd>
+                            <dt>Screen</dt>
+                            <dd>
+                                Destinado principalmente a pantallas <b>
+                                <p>Nota: (Este es el que se desenglosa en este apartado)</p></b>
+                            </dd>
+                            <dt>Speech</dt>
+                            <dd>Destinado a sintetizadores de voz</dd>
+                        </dl>
+                    </dd>
+                    <dt><b>Operadores</b></dt>
+                    <dd>
+                        <ul>
+                            <li>AND</li>
+                            <li>OR</li>
+                        </ul>
+                    </dd>
+                    <dt><b>Orientación</b></dt>
+                    <dd>
+                        <ul>
+                            <li>Landscape: La pantalla es más ancha que larga</li>
+                            <li>portrait: la pantalla es más larga que ancha</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </section>
+            <section id="metodoliguias">
+                <h2>metodoliguías</h2>
+                <p>A la hora de desarrollar los estilos de una paguina web responsive  existen dos metodologuias que se encuentran estandarizadas en la industria, las cuales son:</p>
+                <dl>
+                    <dt><h3>Movile-first</h3></dt>
+                    <dd>
+                        <p>Esta metodologuia se basa en el hecho de que es más facil diseñar los elementos en una pantalla de telefono y de allí agrandarlos para adaptarlo a una pantalla de computador, es decir que esta metodologuia se centra en desarollar los estilos movile primero, por lo tanto <b>esta metodologuia va de pequeño a grande</b>.</p>
+                    </dd>
+                    <dt><h3>Desktop-first</h3></dt>
+                    <dd>
+                        <p>Esta metodologuia se opone a la anterior ya que prioriza el desarrollo de los estilos de computador antes que los de movile, si vien no significa que los deje de lado si que empieza primero por la visualización de la paguina en un compitador, por lo tanto <b>esta metodología va de grande a pequeño</b>. </p>
+                    </dd>
+                </dl>
+                <b><p>Nota: Entre estas metodoliguias siempre que se trate con responsive desing se recomienda el uso de movile-first, ya sea por posicionamiento, facilidad, buenas parcticas entreo otras cosas. </p></b>
+                <p>Aparte de estas existe una tercera metodologuía llamada <b>content-first</b>, la cual se centra principalmete en el contenido de la paguina y de alli lo adaptse segun a lo que retorne un mayor veneficio, esta metodologuia esta más basada en el marqueting que en el diseño en si.</p>
+            </section>
+            <section id="propiedades">
+                <h2>Propiedades</h2>
+                <p>Lo primero a la hora de crear un diseño responsive es definir en que sircunstancia se utilizaran esos estilos, para eso se utiliza el <b>@media query</b> a la vez que se define el caso de uso seguido del condicional en el que se empleara los estilos, dentro de la estructura de CSS esto actuara como un selector de la cituación en la que se emplearan todos los estilos que se efinana dentro de este caso. </p>
+                <h4>Ejemplo</h4>
+                <img src="./img/responsive1.PNG" alt="">
+                <p>Este ejmplo indica al navegador que los estilos se utilizaran cuando: "la paguina sea una pantalla (screen), y posea un <b>width</b> mayor a 400px", para esto se utiliza la propiedad <b>min-width</b></p>
+                <p>Del mismo modo que se define unas dimenciones minimas para mostrar los estilos tambien se puede definir unas dimenciones maximas, para esto se utiliza la propiedad <b>max-width</b>, a su vez tambien es posible definir una dimención minima y una maxima al mismo tiempo para un estilo, por lo tanto no se aplicaran si la pantalla no alcanza el tamaño estipulado o si lo excede.  </p>
+                <h4>Ejemplo</h4>
+                <img src="./img/responsive2.PNG" alt="">
+                <p>De este modo este ejmplo define que: "si se trata de una patalla (screen), y posee un <b>width</b> mayor a 400px y un <b>width</b> menor a 650px" entonces se muestren los estilos</p>
+                <p><b>En ambos ejemplos se muestran los estilos ya que se cumplen las condiciones establecidas, ya que se esta utilizando el condicional <b>AND</b> si alguna de estas condiciones llegase a incumplirse entonces los estilos no serian aplicados a la paguina.</b></p>
+                <p>De este modo es como se pueden definir diferentes "casos de uso" para los estilos de una paguina, permitiendonos ajustar los estilos de esta a cada dispositivo y sircunstancia en la que esta se visualise.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

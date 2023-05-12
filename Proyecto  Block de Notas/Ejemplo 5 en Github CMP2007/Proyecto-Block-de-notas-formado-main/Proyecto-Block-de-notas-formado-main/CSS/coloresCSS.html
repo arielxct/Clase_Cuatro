@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores CSS</title>
+</head>
+<body>
+    <main>
+        <h1>Colres CSS</h1>
+        <article>
+            <section ondblclick="descripción">
+                <p>Los coleres son quizas uno de los temas más importantes dentro de lo que es el diseño de una paguina web, por lo tanto CSS al ser un lenguaje web basado en la inplementación de los diseños es capaz de utilizar toda la gama de colores desiponibles en diferentes formatos, de esa forma adaptando se a cualquiere necesidad que pdiese surguir en el diseño de una paguina web.</p>
+                <p>A continuación se desenglosan los principales formatos de colores aceptados por CSS, sin embargo para obtener un listado completo de los codigos de color  basta con hacer una <b>busqueda de los codigos de color HTML</b> o ingresar a <a href="https://www.w3schools.com/colors/default.asp">este tutorial de colores CSS</a> donde se define en propfuncidad todas las caracteriticas y funcionalidades de estos en CSS. </p>
+            </section>
+            <section>
+                <p><h2>Formatos de colores</h2></p>
+                <dl>
+                    <dt id="nombreColor"><h3>Nombre del Color</h3></dt>
+                    <dd>
+                        <p>Una de las formas más simples de definir el color de un elemento es simplemete utilizando su nombre, cabe resaltar que como todo lenguaje de programación su sintaxis esta escrita en ingles, por lo que es necesario utilizar el nombre de los colores en ingles </p>
+                        <p><b>En este enlace se puede encontrar el <a href="https://developer.mozilla.org/es/docs/Web/CSS/color_value">listado de todos los nombres de colores disponibles en CSS</a> </b></p>
+                        <p><b>Nota: Esta forma de definir los colores no es lo más recomendable, ya que al aplicar los colores de esta forma el navegador el que aplicara el tono de color que tenga definido por defecto con ese nombre, tonalidad que puede variar al ingresar desde un navegador diferente, por lo que es muy posible que ingresando desde otros navegadores los tonos de colores de la paguina sean otros.</b></p>
+                        <img src="./img/nombreColor.PNG" alt="">
+                    </dd>
+                    <dt id="RGB"><h3>RGB</h3></dt>
+                    <dd>
+                        <p>En el area de la tecnología los colores primarios no son el amarillo, azul y rojo, como en el mundo del arte, <b>para las computadoras los colores primarios son el rojo, verde y azul</b>, esto ya que mesclando estos tres las computadoras son capases de crear cualquier otro color.</p>
+                        <p>Para lograr esto las computadoras asignan un valor a estos tres colores en una escala, en la cual mientras mayor es el valor de cada color mayor es su intencidad en la mescla, definiendo así que el valor minimo de la escala es "0" mientras que el maximo es "255". </p>
+                        <img src="./img/RGB.PNG" alt="">
+                        <p>En <b>RGB</b> cada valor define un color: </p>
+                        <ol>
+                            <li><p>El <b>primer</b> número define el color <b>Rojo</b></p></li>
+                            <li><p>El <b>segundo</b> número defien el color <b>Verde</b></p></li>
+                            <li><p>El <b>tercer</b> número define el color <b>Azul</b></p></li>
+                        </ol>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/ejmRGB.PNG" alt="">
+                        <p><b>Nota: Para poner uno de estos colores en su intencidad maxima simplemte se le asigna el valor maximo (255) mientras que a los otros colores el valor minimo (0), a su vez si se desea generar un tono más oscuro simplemete basta con bajar el valor del color en cuestión, por ejmplo (150).</b></p>
+                        <p><b>Nota: Por otro lado en este formato el color negro es (0,0,0) es decir todos los colores en el valor minimo mientras que el color blanco es (255,255,255) es decir todos los colores en el valor maximo, y por ultimo la escala de grises se logra con todos los valores igualados ejemplo (150,150,150).</b></p>
+                    </dd>
+                    <dt id="RGBA"><h3>RGBA</h3></dt>
+                    <dd>
+                        <p>Este formato de color realmente es una variante de <b>RGB</b>, diferenciandose con la inclusión de un cuarto valor llamado "alpha", el cual representa la "opacidad" del color, es decir la transparencia del color, a la cual se le asigna un valor minimo de "0" en el cual el color es totalmente transparente y "1" donde el color es completamente visible. </p>
+                        <p>En otras palabras <b>RGBA</b> es un formato con el mismo funcionamiento de <b>RGB</b> pero con la capacidad de definiruna trasparencia para el color.</p>
+                        <img src="./img/RGBA.PNG" alt="">
+                    </dd>
+                    <dt id="exadecimal"><h3>Exadecimal</h3></dt>
+                    <dd>
+                        <p>Este formato de colores es el más complejo debido a que se basa en el codigo de numeración exadecimal, en el cual se utilizan 16 simbolos para numerar, estos simbolos estan conformados por los numeros del "1" al "10" y las letras de la "A" a la "F", con este codigo de numeración se crea un valor para cada color manteniendo el formato de colores primarios web (rojo, verde y azul) donde nuevamente :</p> 
+                        <ol>
+                            <li><p>El <b>primer</b> valor define el color <b>Rojo</b></p></li>
+                            <li><p>El <b>segundo</b> valor defien el color <b>Verde</b></p></li>
+                            <li><p>El <b>tercer</b> valor define el color <b>Azul</b></p></li>
+                        </ol>
+                        <img src="./img/exadecimal.PNG" alt="">
+                        <p>Una caracteritica de la empleación del formato exadecimal es que se puede emplear los valores de diversas formas para defir los colores web: </p>    
+                        <img src="./img/ejmExadecimal.PNG" alt="">
+                        <p><b>Nota: En CSS es necesario incluir el hashtag (#) alprincipio para definir el codigo exadecimal como tal.</b></p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

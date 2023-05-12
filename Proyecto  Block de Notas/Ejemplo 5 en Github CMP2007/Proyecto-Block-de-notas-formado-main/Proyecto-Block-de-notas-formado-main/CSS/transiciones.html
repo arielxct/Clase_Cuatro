@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+</head>
+<body>
+    <main>
+        <h1>Transition</h1>
+        <article>
+            <section id="descripcion">
+                <p>El efecto de esta propiedad es que permite visualizar los "fotogramas" que estan involucrados en los cambios o modificaciones que sufren los estilos, de modo que se pueda apreciar el proceso de los cambios ocurridos en estos.</p>
+                <p>Una caracteritica de las tranciciones es que se pueden aplicar a cualquier cambio ocurrido en las propiedades de los elementos, pero para que se ejecute debe de accionarse un evento.</p>
+                <p><b>Nota: esta propiedad debe aplicarse en el estilo del elemento en el que surtira efecto.</b></p>
+            </section>
+            <section id="propiedades">
+                <h2>Propiedades obligatorias</h2>
+                <p>Son aquellas propiedades sin las cuales las transiciones simplemete no funcionana, ya que estas definen aspectos esenciales de esta, por lo cual requiere que estas posean un valor:</p>
+                <dl>
+                    <dt id="Transition-property"></dt>
+                    <dd>
+                        <p>El proposito de esta propiedad es definir a cual propiedad se aplicara la transición, para esto se ingresa el nombre de dicha propiedad como valor de <b>Transition-property</b> de la siguite manera.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/transition-property.PNG" alt="">
+                        <p>Una caracteritica de esta propiedad es que acepta el valor <b>"all"</b>, el cual le indica al navegador que todos los cambios de todas las propiedades de la clase se les aplicara una transición, sin embargo este valor no es muy recomendable ya que inplica un gran consumo de recursos del dispositivo.</p>
+                        <p>Otra posibilidad es definir más de una propiedad para que se le realise una transicón a la vez, esto se puede lograr simplemte con ingrasar el nombre de la segunda propiedad separado por una coma(,) del nombre de la primera. </p>
+                        <img src="./img/transition-property2.PNG" alt="">
+                    </dd>
+                    <dt id="transition-duration"><h3>Transition-duration</h3></dt>
+                    <dd>
+                        <p>Esta propiedad define el tiempo que demorara la transición en completarse, por lo tanto los valores que acepta son segundos </p>
+                        <h4>Ejemplo</h4>
+                        <img src="img/transition-duration.PNG" alt="">
+                        <b><p>Esta proiedad junto con <b>transition-property</b> son las que permiten que las transiciones funcionene en un elemento.</p></b>
+                        <p>Al igual que <b>transition-property</b> en esta propiedad se puede definir el tiempo de duración de más de una propiedad a la vez,  simplemte se ingrese el seguno tiempo separado por una coma (,) del primero.</p>
+                        <img src="./img/transition-duration2.PNG" alt="">
+                        <p>Tambien se puede aplicar un mismo tiempo para más de una propiedad, para esto simplemte se ingresa un unico tiempo en la propiedad, de ese modo este tiempo se generalizara y se aplicara todas las propiedades.</p>
+                    </dd>
+                </dl>
+                
+                <h2>Propiedades complementarias</h2>
+                <dl>
+                    <dt id="transition-delay"><h3>Transition-delay</h3></dt>
+                    <dd>
+                        <p>Esta propiedad configura un retraso en la ejecuación de la transición, su función justamente esa demorar un poco el inicio de la transición, dicho "delay" se aplica tanto al ocurrir el cambio como al deshacerlo, es decir el "delay" se aplicara al poner los nuevos estilos como al quitarlos. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/transition-delay.PNG" alt="">
+                    </dd>
+                    <dt id="transition-timing-function"><h3>Transition-timing-function</h3></dt>
+                    <dd>
+                        <p>Esta propiedad define la forma en la que se llevara a cabo la transición, simplemete modifica el ritmo en la que esta se ejecutara, es decir dependiendo de su valor puede que el ritmo de la transición aumete o disminuya en algun punto de esta, sus valores posibles son:</p>
+                        <ul>
+                            <li>
+                                <p><b>Linear: </b> La transición se desarrolla siempre a la misma velocidad</p>
+                            </li>
+                            <li>
+                                <p><b>Ease: </b> La transición empieza rapido y su velocidad disminuye a medida que termina</p>
+                                <p><b>Nota: Este se trata del valor por defecto de la propiedad</b></p>
+                            </li>
+                            <li>
+                                <p><b>Ease-in: </b> Esta valor es el opuesto de <b>ease</b> la transición empieza despacio y termina rapido</p>
+                            </li>
+                            <li>
+                                <p><b>Ease-out</b> Este valor se asemeja mucho a <b>ease</b> pero no llega a alcanzar tanta velocidad, acelera y frena más lentamete</p>
+                            </li>
+                            <li>
+                                <p><b>Ease-in-out</b> La transición empieza despacio acelera y luego termina despacio</p>
+                            </li>
+                        </ul>
+                        <p><b>Nota: Esta propieda no modifica el tiempo de duración de la transición, eso es un rol exclusivo de la propiedad transition-duration </b></p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

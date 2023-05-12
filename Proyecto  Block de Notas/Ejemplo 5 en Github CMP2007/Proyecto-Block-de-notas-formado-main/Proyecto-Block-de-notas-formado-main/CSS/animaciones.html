@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+</head>
+<body>
+    <main>
+        <h1>Animaciones</h1>
+        <article>
+            <section id="descripcion">
+                <p>CSS es un lenguaje lo bastate potente como para llegar a crar animaciones, las cuales en si funcionan de una forma similar al de las transiciones, sin embargo cesto solo hasta cierto punto, ya que la creación de animaciones en CSS involucra varios recursos especiales:</p>
+            </section>
+            <section>
+                <dl>
+                    <dt id="@keyframes"><h3>@keyframes</h3></dt>
+                    <dd>
+                        <p>Se trata del una clase especializada para la creación de las animaciones, dentro de esta es donde se definiran las propiedades de esta, la estructura de esta clase requiere que justo despues de su uso se indique el nombre que se le dara a la animación por crear, luego de este nombre le siguen las llaves ({}) delimitadoras de la propiedad.</p>
+                        <img src="./img/animaciones1.PNG" alt="">
+                        <p><b>Nota: el nombre de la animación es creado por el desarrollador, no son parametros pre-establecidos.</b></p>
+                        <p>Dentro de esta, las propiedades que se aplicaran en la animación se dibiden dentro de dos propiedades cotenedoras, las cuales son:</p>
+                        <ul>
+                            <li>
+                                <p><b>From: </b> Contiene las propiedades que el elemento poseera cuano se <b>inicie</b> la animación</p>
+                            </li>
+                            <li>
+                                <p><b>To: </b> Contiene las propiedades que el elemento poseera caundo se <b>finalise</b> la animación</p>
+                            </li>
+                        </ul>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/animaciones2.PNG" alt="">
+                        <h4>Porcentajes</h4>
+                        <p><b>From</b> y <b>To</b> no son la unicam forma de estructurar las propiedades de la animación, otra forma de hacerlo es espesifficando uno o más porcentajes de desarrollo, para aplicar alguna propiedad, es decir se pueden usar porcentajes como contenedores de propiedades, que se aplicaran a la animación cuando alcanse ese nivel de desarrollo. </p>
+                        <img src="./img/animaciones5.PNG" alt="">
+                        <p>La ventaja de esta tecnica es que podemos aplicar las propiedades en cualquier momento de la animación que se desee, sin tener que limitarse a aplicarlas al principo o al final.</p>
+                        <p></p>
+                    </dd>
+                </dl>
+            </section>
+            <section>
+                <h2>Propiedades del item </h2>
+                <p>Se refiere a todas aquellas propiedades que se definiran dentro de la clase del elemento HTML, con el fin de vincular la animación a este y definir su comportamiento.</p>
+                <dl>
+                    <dt id="animation-name"><h3>Animation-name</h3></dt>
+                    <dd>
+                        <p>Esta propiedad vincula la animación con el elemento HTML, para hacerlo se utiliza la propiedad <b>animation-name</b> con el nombre de la animación en cuestión dentro de la clase que posee el elemento HTML, en otras palabras para vincular la animación con el elemento HTML se hace una llamado a la animación desde la clase que posea el elemento.</p>
+                        <img src="img/animaciones3.PNG" alt="">
+                    </dd>
+                    <dt id="animation-duration"><h3>Animation-duration</h3></dt>
+                    <dd>
+                        <p>Esta propiedad unicamete define la duración de la animación, ya que se trata de una propiedad de tiempo acepta segundos como valor</p>
+                        <img src="./img/animaciones4.PNG" alt="">
+                    </dd>
+                    <dt id="animation-timing-function"><h3>animation-timing-function</h3></dt>
+                    <dd>
+                        <p>Esta propiedad define la forma en la que se llevara a cabo la animación, simplemete modifica el ritmo en la que esta se ejecutara, es decir dependiendo de su valor puede que el ritmo de la animación aumete o disminuya en algun punto de esta, sus valores posibles son:</p>
+                        <ul>
+                            <li>
+                                <p><b>Linear: </b> La animación se desarrolla siempre a la misma velocidad</p>
+                            </li>
+                            <li>
+                                <p><b>Ease: </b> La animación empieza rapido y su velocidad disminuye a medida que termina</p>
+                                <p><b>Nota: Este se trata del valor por defecto de la propiedad</b></p>
+                            </li>
+                            <li>
+                                <p><b>Ease-in: </b> Esta valor es el opuesto de <b>ease</b> la animación empieza despacio y termina rapido</p>
+                            </li>
+                            <li>
+                                <p><b>Ease-out</b> Este valor se asemeja mucho a <b>ease</b> pero no llega a alcanzar tanta velocidad, acelera y frena más lentamete</p>
+                            </li>
+                            <li>
+                                <p><b>Ease-in-out</b> La animación empieza despacio acelera y luego termina despacio</p>
+                            </li>
+                        </ul>
+                        <p><b>Nota: Esta propieda no modifica el tiempo de duración de la animación, eso es un rol exclusivo de la propiedad animation-duration </b></p>
+
+                        <h4>Cubic-bezier</h4>
+                        <p>Se trata de una valor especial que puede adoptar esta propiedad, su función consiste en utilizar las cordenadas de un <b>cubic-bezier</b> para definir el movimiento y la velocidad que se aplicara en la animación, ya que el <b>cubic-bezier</b> se basa en cordenadas como las den un mapa carteciano, para cada cordenada se nesecita dos datos, un valor del eje <b>X</b> y uno del eje <b>Y</b>, para cada cordenada. </p>
+                        <p><b>Grafica de un Cubic-bezier</b></p>
+                        <img src="https://valhead.com/wp-content/uploads/2017/02/cubic-bezier-graph.png" alt="">
+                        <p><b>Codigo</b></p>
+                        <img src="./img/Cubic-bezier.PNG" alt="">
+                        <p>La linea que conecta las dos cordenadas representa el desarrollo de la animación mientras que los valores del eje <b>X</b> y el eje <b>Y</b> representan el la cantidad de movimiento que se realiara en ese respectivo eje en ese momento.</p>
+                        <p>Es perfectamte posible el aplicar los valoresde las cordenadas manualmete, sin embargo no es algo recomendable, ya que a la hora de definir adecuadamete el movimiento de la animación, es de gran ayuda apoyarse en una grafica <b>cubic-bezier</b>, para lo cual es mejor recurrir a un generador <b>cubic-bezier</b>, ya que estos se encuentra a plena dispocición en internet, y permiten interactuar con la grafica a medida que se modifican los valores, en este enlase se encuentra un buen generador <a href="https://cubic-bezier.com/#.17,.67,.83,.67"><b>cubic-bezier</b></a>. </p>  
+                        <p>En las herramientas de desarrollador de google tambien se enceuntra un generador <b>cubic-bezier</b>, para acceder a este es necesario dar "clic derecho", seguido se ingresa en "Inpeccionar elemento", y se procede a buscar los estilos CSS de la paguina, en el recuadro que permite añadir estilos ingresamos <b>"animation-timing-function: cubic-bezier(.17,.67,.83,.67)"</b> para aplicar la propiedad con un valor de ejemplo, junto al valor <b>"cubic-bezier"</b> aparecera un recuadro al clickearlo se extiende el generrador <b>cubic-bezier</b> que nos permite modificar los valores de las cordenadas al amplearlo.  </p>
+                        <img src="img/ejmCubic-bezier.PNG" alt="">
+                        <p><b>Aplicando este recurso a las animaciones se pueden lograr movimientos mas realias o de revote facilmente, incluso existe librerias completas enfocadas a este recurso.</b></p>
+
+                    </dd>
+                    <dt id="animation-interation-count"><h3>Animation-interation-count</h3></dt>
+                    <dd>
+                        <p>Esta propiedad define el numero de repeticiones que ejecutara la animación, debido a su simplicidad esta propiedad acepta cualquier valor numerico entero, sin embargo tambien cuenta con otro valor posible, el valor <b>infinite</b>, el cual indica que la animación se repetira indefinidamete.</p>
+                        <img src="./img/animaciones6.PNG" alt="">
+                    </dd>
+                    <dt id="animation-direction"><h3>Animation-direction</h3></dt>
+                    <dd>
+                        <p>Esta propiedad define la dirección en la que se realiza la animación, sus posibles valores son:</p>
+                        <ul>
+                            <li>
+                                <p><b>Normal: </b> Se trata del valor por defecto, esta orientación desarrolla el proceso de 0% a 100%</p>
+                            </li>
+                            <li>
+                                <p><b>Reverse: </b> Este valor invierte el sentido <b>normal</b> de la animación, esta orientación desarrolla el proceso de 100% a 0%</p>
+                            </li>
+                            <li>
+                                <p><b>Alternate: </b> Este valor alterna entre los dos anteriores, es como ir y volver, primero un valor <b>normal</b> y luego <b>reverse</b>, esta orientación desarrolla el proceso de 0% a 100% y luego de 100% a 0%. </p>
+                                <p><b>Nota: este valor solo surte efecto cuando se realiza más de una repetición, de lo contrario carece de sentido</b></p>
+                            </li>
+                            <li>
+                                <p><b>Alternate-reverse: </b> Este valor es lo contrario a <b>alternate</b>, realiza el mismo efecto con la diferencia de que empieza con una dirección <b>reverse</b> y luego una <b>normal</b>, esta orientación desarrolla el proceso de 100% a 0% y luego de 0% a 100%</p>
+                                <p><b>Nota: este valor solo surte efecto cuando se realiza más de una repetición, de lo contrario carece de sentido</b></p>
+                            </li>
+                        </ul>
+                        <h4>Ejemplo</h4>
+                        <img src="img/animaciones7.PNG" alt="">
+                    </dd>
+                    <dt id="animation-fill-mode"><h3>Animation-fill-mode</h3></dt>
+                    <dd>
+                         <p>Esta propiedad define cual va ser el modo final de la animación, cuanta con varios valores posibles:</p>
+                         <ul>
+                            <li>
+                                <p><b>None: </b> Define que la animación culmine en el principio</p>
+                            </li>
+                            <li>
+                                <p><b>Backwards: </b> Define que el elemento optendra los valores de estilos establecidos por el primer fotograma clave (depende de la direción de la animación) y lo conservara durante el periodo de retraso de la animación</p>
+                                <p><b>Nota: El uso de esta es muy escaso</b></p>
+                            </li>
+                            <li>
+                                <p><b>Forwards: </b> Este valor define que el elemento permasesca con los valores definidos en la ultima instancia, es decir permanecesar con las propiedades definidas por el punto en el que se finalise</p>
+                            </li>
+                            <li>
+                                <p><b>Both: </b> Este valor define que el elemento inicie con las propiedades que se definan al comienzo de la animación </p>
+                            </li>
+                         </ul>
+                         <h4>Ejemplo</h4>
+                         <img src="img/animaciones9.PNG" alt="">
+                    </dd>
+                    <dt id="animation-delay"><h3>Animation-delay</h3></dt>
+                    <dd>Esta propiedad configura un retraso en la ejecución de la animación, su función justamente esa demorar un poco el inicio de la animación.</dd>
+                    <h4>Ejemplo</h4>
+                    <img src="./img/animaciones8.PNG " alt="">
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

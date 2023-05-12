@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+</head>
+<body>
+    <main>
+        <h1>Position</h1>
+        <article>
+            <section>
+                <p>Esta es una propiedad de gran inportancia en CSS, nos permite determinar la posición e la que se ubicara uno o más elementos en un contenedor, esta propiedad cuenta con diversos valores, cada uno con su propio efecto y particularidades:</p>
+            </section>
+            <section>
+                <h2>Valores</h2>
+                <dl>
+                    <dt id="static"><h3>Static</h3></dt>
+                    <dd>
+                        <p>Este se trata del valor por defecto de los elementos HTML, basicamente su balor es nulo, ya que le indica añ navegador que el elemento no se encuenta posicionado.</p>
+                    </dd>
+                    <dt id="relative"><h3>Relative</h3></dt>
+                    <dd>
+                        <p>Este segundo valor posee posee una mecanica intenresante, permite desplazar algun elemento sin que este pierda su espacio designado, recordmos que todos los elementos HTML tiene un lugar designado por defecto, ya sea arriba, alado o debajo de otro, el efecto de esta propuedad es que se puede desplazar el elemento por el eje <b>X</b> y el eje <b>Y</b>, a la vez que este continua conservando su espacio designado  </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/position1.PNG" alt="">
+                        <p>Como se puede apreciar en este ejemplo la caja uno se encuentra desplzada a la derecha y hacia abajo, sin embargo el espacio designado por defecto para ella le siguie perteneciendo.</p>
+                        <h4>Funcionamiento</h4>
+                        <p>Al aplicarse el valor <b>relative</b> el elemento en cuestión adquiere la capacidad de utilizar cinco nuevas propiedades para desplazar el elemento:</p>
+                        <ul>
+                            <p><b>Eje Y</b></p>
+                            <li><b>Top </b></li>
+                            <li><b>Bottom</b></li>
+                            <p><b>Eje X</b></p>
+                            <li><b>Left</b></li>
+                            <li><b>Right </b></li>
+                            <p><b>Eje Z</b></p>
+                            <li><b>z-index</b></li>
+                        </ul>
+                        <h4>Desplazamiento en eje X y Y</h4>
+                        <p>Para desplazar el elementos hay que tener en cuanta que el punto de partida es el espacio asignado por defecto al elemento, a la vez que esta propiedad le brinda prirodad al valor de <b>left</b> y <b>top</b>, por lo que lo comun es utilizar unicamente estos valores, si se incluye <b>right</b> o a <b>botton</b> junta a <b>left</b> y <b>top</b> estos simplemente seran ignorados.</p>
+                        <p><b>Nota: El objetivo de estas propiedades es distanciar el elemento de su respectiva dirección por ello el efecto es inverso al nombre de la propiedad, al darle un valor a izquierda se desplaza a la derecha. </b></p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/postionRelative1.PNG" alt="">
+
+                        <h4>Desplazamiento en el eje Z</h4>
+                        <p>El desplazamiento en el eje <b>Z</b> se adqiere al posicionar los elemtos, por lo que un elemento que no posea la propieda <b>position</b> no podra hacer uso de esta.</p>
+                        <p>Al posicionarse un elemento su valor por defecto es "0", no obstante una caracteritica del flujo de presentación de los elementos en HTML es que los ultimos elementos tiene una mayor gerarquia en el eje <b>Z</b> que los primeros, por lo tanto si se diese el caso de que dos elementos posicionados se sobreponen el el ultimo elmento en declararse se mostraria por encima del otro, todo esto por defecto.</p>
+                        <img src="./img/ejmPosition1.PNG" alt="">
+                        <p>Para modificar este flujo de presentación de elementos es necesario asignarle un valor numerico a la propiedad <b>z-index</b>, esta propiedad mostrara por encima el elemento con el mayor valor.</p>
+                        <p><b>Nota: Una buena practica es la de definir que el aumento de valor de los elemtos sea como minimo en 10 en 10 o más, esto con el fin de tener un margen númerico con el que podamos ubicar futuros elementos de ser necesario. </b></p>
+                        <h4>Conflicto de contenedores padres e hijos</h4>
+                        <p>Por lo general es imposible ubicar al cotenedor por encima del su respectivo elemento hijo, ya que este se encuentra dentro, sin importanr el valor de <b>z-index</b> que se le atribuya el contenedor <b>nunca</b> se ubicara por encima del elementos hijo, salvo si se recurre a un limbo en el codigo.</p>
+                        <p>De ser necesario se puede producir este agujero haciendo lo siguiete: </p>
+                        <ol>
+                            <li><p>Se posicionan tanto el elemento padre com el hijo (se aplica el valor <b>relative</b> en la propiedad <b>position</b> )</p></li>
+                            <li><p>No se define la propiedad <b>z-index</b> en el elemento padre</p></li>
+                            <li><p>Se define el valor de "-1" en <b>z-index</b> en el elemento hijo</p></li>
+                            <p>Esta es la unica forma de lograr que el contenedor se ubique por encima de su respectivo elemento hijo. </p>
+                        </ol>
+                    </dd>
+                    <dt id="absolute"><h3>Absolute</h3></dt>
+                    <dd>
+                        <p>El efecto de este valor es muy similar a <b>relative</b>, sin embargo existen tres diferencias notorias:</p>
+                        <ol>
+                            <li>
+                                <p>Al posicionar el elemento con este valor el espacio designado para este se vacia, por lo que el navegador utilizara ese espacio para otro elemento, en otras palabras el piede su espacio designado y se podria desir que se vuelve un elemento "flotante", ya que no posee un espacio respecto a otros elementos. </p>
+                            </li>
+                            <li>
+                                <p>Uno de los efectos del valor <b>absolute</b> es que por defecto los elementos que esten posicionados de esta forma sus dimenciones de ajustaran a su contenido, para evitar esto es necesario declarar su tamaño con los atributos <b>width</b> y <b>height</b></p>
+                            </li>
+                            <li>
+                                <p>Ya que en este tipo de posicionamiento no se conserva el espacio recervado del elemento este no se puede utilizar como referencia para defibir la posición del elemento, en este caso se utulizan dos cosas:</p>
+                                <ul>
+                                    <li>
+                                        <p><b>El Viewport:</b> Se trata del espacio de pantalla en el que se visualiza la paguina, los elementos se guían por este en los casos en los que no se enceuentren en un contenedor o que se defina manualemente el uso de las propiedades <b>Top , left, right</b> y <b>botton</b>, en cuyo caso el elemento ignorara el contenedor y se ubicara en referencia al viewport de esta forma:</p>
+                                        <img src="./img/ejmAbsulute.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>El Contenedor: </b> La posición por defecto de los elementos se calcula en referencia a su contenendor, sin mebargo tal como se a indicado anteriormente, si se esepesifica la posición de los elementos de forma manual con el uso de las propiedades <b>Top , left, right</b> y <b>botton</b>, entonces los elementos ignoran al contenedor, para evitar esto es necesario que este se encuentre a su vez posicionado con el valor <b>relative</b>, de este modo se podra definir la posición de los elementos en base a su contenedor </p>
+                                        <h4>Este codigo:</h4>
+                                        <img src="./img/absolute.PNG" alt="">
+                                        <h4>Resulta en esto:</h4>
+                                        <img src="./img/ejmAbsulute2.PNG" alt="">
+                                        <p><b>Dentro del contenedor la posición inical de todos los elementos es en la esquina superior izquierda, esto es igual a un valor de <b>top: 0px;</b> y de <b>left: 0px;</b></b></p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <h4>Centrar elementos con Absolute</h4>
+                        <p> Para esto es necesario definirlo con un valor de "0px" en las cuatro propiedades: <b>Top , left, right</b> y <b>botton</b> y añadir un <b>margin: auto;</b>, de ese modo el navegador al no poder elegir a donde envarlo lo desplazara a la mitad exacta y ajustara el valor del margen para compensar las dimenciones del contenedor o viewport, de este modo se mantendra centrado sin importar las dimenciones o caracteriticas de la pantalla desde la que se visualise.</p>
+                    </dd>
+                    <dt id="fixed"><h3>Fixed</h3></dt>
+                    <dd>
+                        <p>El valor <b>Fixed</b> realmente es muy paracido a <b>Absolute</b>, con una unica diferencia, una vez el elemento pierde su espacio reservado y pasa a ser un elemento "flotante" este quedara fijo en la pantall, en la posición indicada por los valores <b>Top , left, right</b> y <b>botton</b>.</p>
+                        <p>El punto de este tipo de elemtos es emplearlos en menus, navegación, publicidades etc, se aplican para quellos elementos que no se desea que se pierdan de visra, si no que se desplazen junto con el usuario por la paguina </p>
+                        <p>Un especto a tener en cuenta de su funcionamiento es que al igual de <b>absolute</b> <b>Fixed</b> pueden cubrir a otros elementos ya que al no ocupar espacio en pantalla el navegador utiliza ese espacio para otros elementos que se encuentren en el flujo de presentación, para solucionar esto existen multiples formas de impedir que los elementos se sobrepongan, una de las más simples consiste en:</p>
+                        <ul>
+                            <li><p>Asignar al elemento <b>body</b> del documento un <b>padding-top</b> para desplazar a todos los elemtos cierta distancia hacia abajo</p></li>
+                            <li><p>Seguido a esto se asigna un <b>marguin-top: negativo</b> al elemento <b>Fixed</b>,para que de ese modo este se desplase hacia arriba y sea el unico elemento del <b>body</b> en esa harea</p></li>
+                        </ul>
+                        <p>De ese modo el elemento <b>Fixed</b> no cubrira el contenido de la paguina y se desplazara junto con el usuario por la paguina web.</p>
+                    </dd>
+                    <dt id="sticky"><h3>sticky</h3></dt>
+                    <dd>
+                        <p>Este se trata del valor más reciente inplementado por CSS, su funcionamiento es una mescla de <b>fixed</b> y de <b>relative</b>, ya que una vez posicionado mantiene su espacio designado en el flujo de presentación y se visualiza como un elemento común, con una gran diferencia, este elemento aprovecha el desplazamiento del usuario por la paguina, una vez el usuario se desplaze verticalmente y el elemento <b>sticky</b> alcanse la posición definida por los valores <b>top</b> o <b>bottom</b> este se anclara allí y se desplazara con el usuario</p>
+                        <p>En otras palabras este elemento se desplaza con normalidad hasta que alcanza la posición definda, de allí en más el elemento se desplazara en conjunto con el usuario, si el usuario retorna, el elemento lo hara con el, y si alcanza nuevamente su espacio designado este se anclara allí volviendo a su posición inicial y dejando de seguir al usuario.</p>
+                        <b><p>Nota: Si los valores top y bottom no son declarados este elemento no se comportara de ninguna forma en especial.</p></b>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

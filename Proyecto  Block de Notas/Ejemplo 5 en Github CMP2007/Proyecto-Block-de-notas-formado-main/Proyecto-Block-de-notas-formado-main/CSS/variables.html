@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables CSS</title>
+</head>
+<body>
+    <main>
+        <h1>Variables CSS</h1>
+        <article>
+            <section>
+                <p>CSS posee la capacidad de trabajar con variables, al igual que en otros lenguajes estos son espación en memoria con una relación nombre/valor utilizados en este caso para almacenar estilos CSS, de ese mismo modo las varialbes pueden ser utilizadas las veces y la cantidad que haga falta.</p>
+                <p>Usar las variables para guardar los valores de una propiedad puede ahorrar mucho tiempo, por ejemplo: si se defininen los colores de la paguina con variables, y llegado el momento se nesecita cambiar estos colores bastara con modificar el valor de la variable en vez de buscar indibidualmente el color de cada elemento y modificarlo.  </p>
+                <p>Las varibles en este lenguajes se dibiden en dis tipos:</p>
+            </section>
+            <section>
+                <h2>Variables Globales</h2>
+                <p>Son aquellas que pueden ser usadas por cualqueer selector, es decir estan disponibles por cualqueer propiedad del documento CSS, la forma de declarar un dato como variable es simple: </p>
+                <ul>
+                    <li>
+                        <p>Se inicia la declaración dentro de una  clase <b>":root"</b></p>
+                    </li>
+                    <li>
+                        <p>Se inicia la declaración con dos(2) guiones (--)</p>
+                    </li>
+                    <li>
+                        <p>Se le da un nombre a la variable seguido de dos puntos (:)</p>
+                    </li>
+                    <li>
+                        <p>Por ultimo se le da un valor a la variable</p>
+                    </li>
+                </ul>
+                <h4>Ejmeplo</h4>
+                <img src="img/ejmVariable1.PNG" alt="">
+                <p>Con eso la variable a sido declarada, para utilizarla en alguno de los selectores simplemete se ingresa la propiedad que uitlizara la variable y en su respestivo valor se ingresa la propiedad <b>var()</b>, con el nombre de la variable a utilizaren el interior de los parentesisñ, como se puede ver en este ejemplo</p>
+                <h4>Ejmeplo</h4>
+                <img src="img/ejmVariable2.PNG" alt="">
+            </section>
+            <section>
+                <h2>Variables locales</h2>
+                <p>Se tratan de aquellas variables que unicamete estan disponibles dentro de una clase o de un elemento, para delcarar una varible como local se repiten los pasos anteriores, con la difernecia de que esta no se declara en la clase <b>:root</b>, en su vez se puede declara dentro de cualqueir selector que se desee, en su consecuencia la variable solo esta disponible para los  elementos relacionados con esta.</p>
+                <h4>Ejemplo</h4>
+                <img src="img/ejmVariable3.PNG" alt="">
+                <p>En este caso la variable unicamte esta disponible para las etiquetas <b>p</b>, a su vez si se da el caso de que la variable sea declarada para un elemento contendor todos sus elementos hijos podran hacer uso de esta, es decir si se declara en el contenedor, los elementos de su interior podran hacer uso de esta variable.</p>
+                <h4>Ejemplo</h4>
+                <img src="img/ejmVariable4.PNG" alt="">
+                <p>A su vez las variables pueden ser re-definidas, para esto simplemte hay que volver a declarar la variable global dentro de un elemento o una clase con otro valor de esta forma:</p>
+                <img src="img/ejmVariable5.PNG" alt="">
+                <p>Así el valor de la varable se sobre-escribira para esta clase o elemento, mientra que para lo demas esta seguira teniendo el mismo valor.</p>
+                <p><b>Nota: las varibles se pueden sobre-escribir sin imortar la gerarquia de los estilos, aún sise usa el "!inportant"</b></p>
+            </section>
+            <section>
+
+                <p></p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

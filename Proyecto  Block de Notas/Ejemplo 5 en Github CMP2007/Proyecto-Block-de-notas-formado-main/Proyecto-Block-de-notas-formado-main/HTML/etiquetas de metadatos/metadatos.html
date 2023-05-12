@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de Metadatos</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
+            <li><a href="" class="CSS">CSS</a></li>
+            <li><a href="" class="JS">JS</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main>
+        <article>
+            <h1>Etiquetas de Metadatos de una Paguina Web</h1>
+            <section id="descripcion">
+                <p>En este partado se definen todas aquellas etiquetas empleadas para definir los metadatos de una paguina web, recordemos que los metadatos son toda aquella información que no esta disponible para los usuarios, su función es la de indicarle las caracteriticas y requerimientos de la paguina al navegador. </p>
+            </section>
+            <section id="etiquetas">
+                <dl>
+                    <dt id="meta"><h3>Meta</h3></dt>
+                    <dd>
+                        <p>Meta se utilizapara incluir y definir los metadatos de la pagina en el header, existen barios tipos de meta que pueden ser interpretados por el navegador.</p>
+                        <p>Un ejemplo de esto esla inplementación de "viewport" en la etiqueta "meta", esta etiqueta es la responsable de que las paguinas web se pueda visualizar en  con las dimanciones de dispositivos moviles, permitiendo de ese modo el "responsive desing" aplicable en el dasarrollo web.</p>
+                        <img src="./img/metaViewport.PNG" alt="">
+                        <p>Otro uso posible es definir que al ser compartida la pagina web en alguna red social el enlace se visualice con una descripción y alguna imagen predefinida, esto con la inteción de que la vista sea mas llamativa y brinde más información a los usuarios sobre el enlace de la paguina, por lo tanto brinde una mejor experiencia. <br> Para lograr esto muchas redes sociales crean suspropios protocolos de metadatos, los cuales son necesarios incluirlos en viñetas "meta" para lograr este efeto al ser compartidas en un red social. </p>
+                        <p>En los siguietes ejemplos se muestra una ejemplificación de un codigo para dar una buena visualización al compatir una paguina web, así com el resultado de este codigo:</p>
+
+                        <h4>Codigo</h4>
+                        <img src="./img/metadatoRedSocial1.PNG" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/metadatoRedSocial2.PNG" alt="">
+                        <p>Otros usos pueden ser: definir el autor de la pagina web, esto puede ser ventajoso utilizarlo por temas de contacto con el autor, tambien puede ser utilizado para incluir una brebe descripción del contenido de la pagina, es bueno utilizar palabras claves ya que esto puede ayudar a que la paguina se posiscione de mejor manera en los buscadores.</p>
+                        <img src="./img/metaDescripcion.PNG" alt="">
+
+                        <h4>Atributos</h4>
+                        <ul>
+                            <li><strong>name: </strong> se utiliza para espesificar el tipo de metadato del que se trata, es decir el tipo de información que contiene</li>
+                            <li><strong>content:</strong>espesifica el contenido del metadato en sí </li>
+                        </ul>
+                        <p><strong>Nota: </strong>Una etiqueta meta con el name = description y un atributo content componen la descripción que se puede encontrar debajo del enlace de la pagina en las buscaquedas de google u otros buscadores.</p>
+                    </dd>
+                    <dt id="link"><h3>Link</h3></dt>
+                    <dd>
+                        <p>Se trata de una etiqueta de metadatos, por lo cual siempre debe estar ubicada em el head de la paguina, esta etiqueta consta de varios usos, entre los cuales uno de los principales es <b>contener los llamados de archivos css</b>, al uzarse de esta forma es necesario que se acompañe de dos de sus atributos con un valor en particular:</p>
+                        <ul>
+                            <li><strong> rel="stylesheet":</strong> Indica que se trata de la hoja de estilos del documento</li>
+                            <li><strong>href=:</strong> Como siempre este debe contener la ruta al archivo css en cuantión </li>
+                        </ul>
+                        <p>Dependiendo de la verción del lenguaje que se maneje tambien puede ir acompañado de otros atributos complementarios como por ejemplo <strong>type="text/css"</strong>.</p>
+
+                        <h4>Definir iconos personalizados para la paguina web</h4>
+                        <p>Para enriqueser el diseño de la web se usan los iconos personalizados, los cuales de usan en diversos contextos.</p> 
+                        <p>El más comun de estos es el fav.icon consiste en un icono predefinido que se mostrara en la parte del navegador que contiene las pestañas aviertas, y tambien se visualizara al guardar la paguina como favoritos.</p>
+                        <p>Para inplemetarlo se necesita guardar la imagen icono en el directorio del proyecto y añadir el siguiente codigo al "head". Un caso de uso real es cear varios "fav.ico", para que se apliquen uno u otro dependiendo del dispositivo desde el cual se vicite el sitio.</p>
+                        <img src="./img/favEjemplo.PNG" alt="">
+                        <p><b>Nota: Actualmete los navegadores aguantan formatos como png o incluso gif, sin embargo el formato .ico garantiza funcionar incluso en verciones desactualizadas.</b></p>
+                        <p><b>Nota: Si tu sitio web utiliza una política de seguridad de contenido (content security policy o CSP) para mejorar la seguridad, la política afecta al favicon. Si te encuentras con problemas como que el favicon no se carga, comprueba que la respuesta a Content-Security-Policy del header para la directriz img-src (en-US) en la cabecera no impide el acceso a este.</b></p>
+                    </dd>
+                    <dt id="script"><h3>Script</h3></dt>
+                    <dd>
+                        <p>Esta biñeta se usa para introducir codigo javaScript al documento, ya sea haciendo referencia a un archivo externo, para lo cual se usa el atributo "src" para definir la ruta del archivo. O incluyendo el codigo directamente en el interior de la biñeta, en este caso no se utiliza ningun atributo en particular.</p>
+                    </dd>
+                    <dt id="defIdioma"><h3>Definir el Idioma de la paguina</h3></dt>
+                    <dd>
+                        <p>Es muy recomendable indicar el idioma en el que esta escrito el contenido del sitio web, esto con el fin de que los buscadores y servcios puedan ubicar y trabajar de mejor forma con nuestro proyecto en base a las preferebcias linguisticas del usuario:</p>
+                        <p>Para esto es necesarioincluir el atributo "lang" dentro de la biñeta "html" del ducumento, el valor de este atributo debe ser un codigo ISO, el cual define cal es el lenguaje a utilizar.</p>
+                        <p>En HTML5 el atributo lang es aplicable a cualquier elemento html, por lo que se puede definir un lenguaje en particular para un elemeto en espesfico, e incluso aplicar más de un lenguaje en la paguina de la siguiente forma: </p>
+                        <img src="./img/ejmLang1.PNG" alt="">
+                        <p>De esta forma los buscadores pueden entender perfectamente los lenguajes he incluso aplicar la pronuciación correcta en el caso de que se usa alguna acción de lectura en la paguina.</p>
+                        <p>En el caso de tener definido un lenguaje y necesitar aplicar otro en algun lugar serai así:</p>
+                        <img src="./img/ejmLang2.PNG" alt="">
+                        <p>Si se diese el caso de ser necesario usar tansolo algunas palabras en otro lenguaje tambie se puede usar el elemeto <a href="../etiquetas texto/texto.html#span">span</a> con el atributo "lan" para definir el leguaje de solo una fracción del texto de la siguiente manera:</p>
+                        <img src="./img/ejmLang3.PNG" alt="">
+                        <p><b>Nota: para saber el codigo de cada lenguaje basta con buscar "codigo ISO paises" en google.</b></p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+<footer>
+    <section>
+        <h2>Contacto</h2>
+        <a href="https://github.com/CMP2007"><img src="../../logos/contacto.jpg" width="150px" alt=""></a>
+        <p>Mi nombre es Carlos Miguel Puche Moreno estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+        <div id="facebook" class="contacto">
+            <h4>Facebook</h4>
+            <a href=""><img src="../../logos/logoFacebook.png" alt="" width="50px"></a>
+        </div>
+        <div id="instagram" class="contacto">
+            <h4>Instagram</h4>
+            <a href=""><img src="../../logos/logoInstagram.png" alt="" width="50px"></a>
+        </div>
+        <p>O contactando me a mi correo electronico</p>
+        <div id="Gmail" class="contacto">
+            <h4>Correo de contacto</h4>
+            <a href="mailto:puchecarlos@gmail.com"><img src="../../logos/LogoGmail.png" alt="" width="50px"></a>
+        </div>
+    </section>
+</footer>
+</html>

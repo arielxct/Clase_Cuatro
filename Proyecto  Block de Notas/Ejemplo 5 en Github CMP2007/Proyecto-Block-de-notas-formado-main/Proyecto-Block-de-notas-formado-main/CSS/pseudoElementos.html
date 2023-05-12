@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elemetos</title>
+</head>
+<body>
+    <main>
+        <h1>Pseudo-Elementos</h1>
+        <article>
+            <section>
+                <p>Los pseudo-elementos Son clases creadas en base a elementos comunes, por lo que no es posible (por medios normales) crear un pseudo-elemento sin uno, estos se distinguen de los elementos comunes ya que algunos requieren del uso de la etiqueta content, estos elementos, no forman parte del DOM, sin enbargo si generan cambios visuales en la paguina web, por lo tanto su empleación no fectara al DOM, por otra parte tambien existen otros pseudo-elementos que si forman parte de DOM como <b>::first-line</b> y <b>::first-letter</b>, los cuales no requieren de uso de la etiqueta content.</p>
+                <p><b>Nota: los doble dospuntos (::) ubicados antes del nombre de la propiedad forman parte de la sintaxis de los pseudo-elementos.</b></p>
+                <h4> Los tipos de pseudo-elementos son:</h4>
+            </section>
+            <section>
+                <dl>
+                    <dt id="::first-line"><h3>::first-line</h3></dt>
+                    <dd>
+                        <p>La función de este es aplicar un estilo a la primera linea de un texto, puede sonar muy simple, sin embargo lo que verdaderamente ofrese este es aplicar el estilo adaptandose al elemento, o a la parte de este que cumpla con dicha caracteristica, todo esto segun las dimenciones de la pantalla, el tipo de dispositivo etc, </p>
+                        <p>De este modo podemos definir que unicamten la porción del texto que se visualiza en esta linea posea un estilo en espesifico, sin recurrir a scrpts de JavaScrip </p>
+                        <h4>Ejemplo</h4>
+                        <p><b>Codigo:</b></p>
+                        <img src="./img/first-line.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="./img/ejmFirs-line.PNG" alt="">
+                        <p>Este codigo resulta en que unicamente a la porción de texto ubicada en la primera linea se le aplicaran los estilos definidos, esto sin importar desde que dispositivo o pantalla se muestren ya que estos se ajustaran para cubrir una mayor o menor porción del texto.</p>
+
+                        <p><b>Una partucularidad de esta propiedad es que no funciona el los elementos inline, sin embargo si lo hace en caulquiera de los otros tipos de elementos.</b></p>
+
+                    </dd>
+                    <dt id="::first-letter"><h3>::First-letter</h3></dt>
+                    <dd>
+                        <p>Se trata de un pseudo-elemento muy similar a <b>first-line</b>, diferenciandose a que su efecto se limita unicamente a la primera letra del texto en cuestión.</p>
+                        <h4>Ejemplo</h4>
+                        <p><b>Codigo:</b></p>
+                        <img src="./img/first-letter.PNG" alt="">
+                        <p><b>Resultado:</b></p>
+                        <img src="./img/ejmFirs-letter.PNG" alt="">
+                        <p><b>Nota: first-letter tampoco se puede aplicar a los elementos inline</b></p>
+                    </dd>
+                    <dt id="::placeholder"><h3>::Placeholder</h3></dt>
+                    <dd>
+                        <p>Este pseudo-elemento cumple con la función de asignar estilos para el texto almacenado en el atributo <b>placeholder</b> de un elemento <b>Input</b> de tipo <b>Text</b>, en si esta es la unica función de este pseudo-elemento.</p>
+                        <h4>Ejmplo</h4>
+                        <img src="./img/placeholder.PNG" alt="">
+                        <p><b>Nota: El atributo placeholder Es en el que se define eltexto por defecto que se muestra en un input, y desaparece al usuario escribe en este.</b></p>
+                        <p><b>Ejemplo</b></p>
+                        <input type=" text" placeholder="Ejmplo placeholder">
+                    </dd>
+                    <dt id="::selection"><h3>::selection</h3></dt>
+                    <dd>
+                        <p>La función de esta peseudoclase es la de aplicar los estilos a todo aquel texto que sea seleccionado por el usuario, los estilos por defecto de los navegadores son un background azul y letras blancas, pero con este pseudo-elemento es posible aplicar las caracteriticas que se desee a la selección de texto realizada por el usuario.</p>
+                        <p>Una de las caracteriticas de esta propiedad es que unicamente puede conportarse como un elemento de linea, por lo que unicamente ecepta propiedades de estos.</p>
+                        <h4>Ejmplo</h4>
+                        <p><b>Estilos por defecto</b></p>
+                        <img src="./img/ejmSelectionDefecto.PNG" alt="">
+                        <p><b>Codigo:</b></p>
+                        <img src="./img/selection.PNG" alt="">
+                        <p><b>Resultado:</b></p>
+                        <img src="./img/ejmSelection.PNG" alt="">
+                    </dd>
+                    <dt id="::before-y-::after"><h3>::besore y ::after/h3></dt>
+                        <dd>
+                            <p>Estos dos pseudo-elementos cumplen con funciones muy cimilares, su efecto es el de mostrar un texto al rededor de un texto HtML, y para hacerlo realmente crean un elemento hijo, es decir:</p>
+                            <ul>
+                                <li><p><b>::before: </b> Esta propiedad muestra un texto <b>antes</b> del texto almacenado en el elemento en cuestión</p></li>
+                                <li><p><b>::after: </b> Esta propiedad muestra un texto <b>despues</b> del texto almacenado en el elemento en cuestión</p></li>
+                            </ul>
+                            <p>Por lo tanto estos textos creados con pseudo-elementos no forman parte del DOM, de hecho para su funcionamiento dependen de la propiedad <b>content</b>, en la cual se almacena el texto que sera mostrado en el elemento hijo, al tratarse de pseudo-elementos CSS logicamente estas propiedades pueden almacenar cualquier propiedad de un elemento lineal. </p>
+                            <p><b>Nota: Una caracteritica de estos pseudo-elementos es que funcionan tanto en elementos de linea como elementos de bloque.</b></p>
+                            <h4>Ejemplo</h4>
+                            <p><b>HTML</b></p>
+                            <img src="./img/before-afterHTML.PNG" alt="">
+                            <p><b>Codigo:</b></p>
+                            <img src="./img/before-after.PNG" alt="">
+                            <p><b>Resultado:</b></p>
+                            <img src="./img/ejmBefore-after.PNG" alt="">
+                        </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

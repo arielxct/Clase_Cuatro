@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Espesificidad</title>
+</head>
+<body>
+    <main>
+        <h1>Concepto de la Espesificidad</h1>
+        <section>
+            <p>Se trata de un concepto de <b>gerarquia</b> entre los estilos. CSS se trata de un lenguaje de cascada, es decir el navegador va aplicando los estilos segun los va leyedo en orden de aparición decendente en el documento CSS.</p>
+
+            <p>Por <b>Ejemplo:</b><br> Se aplica un estilo a un elemento HTML, pero posteriormente se define un segundo estilo que altera algunas propiedades de este elemento, CSS como se trata de un lenguaje de cascada aplicara los primeros estilos y posteriormente sobre escribira las propiedades en conflicto al aplicar es segundo estilo, por lo tanto siempre que los estilos cuenten con la misma gerarquia se aplicara el ultimo estilo seleccionado.</p>
+
+            <p>Es aqui donde entra en juego la <b>espesificidad</b>, consiste en que segun el selector que se aplique en el estilo este podra tener mayor o menor gerarquia que otras clases, por lo tanto existe una escala gerargica en la cual mientra más gerarquia posea un tipo de selector mayor prioridad tendran los estilos que lo utilisen.</p>
+
+            <p>Por lo tanto pese a que se trata de un lenguaje de cascada si se utiliza un selector de alta gerarquia como por ejemplo un "id" para definir un estilo ninguno de sus atributos podran ser modificados por un estilo que aplique un selector de menor gerarquia com por ejemplo una clase.</p>
+
+            <h4>A continuación se muestra la tabla de gerarquias CSS</h4>
+
+            <img src="./img/Espesificidad.PNG" alt="">
+            
+            <p><b>Como se puede ver las gerarquias estan divididas en 5 grupos entre los cuales algunos de ellos estan conformados por diversos selectores, en estos casos estos selectores tienen la misma prioridad en CSS</b></p>
+
+            <p><b>Nota: los "estilos en linea" son aquellos estilos CSS definidos directamente dentro del documento HTML utilizando un elemento "style"</b></p>
+
+            <h3>!Inportant</h3>
+            <p>En la cima de esta tabla de selectores se encuentra un nuevo tipo de recurso, el <b>"!important"</b>, esta opción consiste en una propiedad especial de CSS el cual puede ser incluida dentro de un estilo sin importar el que tipo de selector use, de la siguiete manera:</p>
+
+            <img src="./img/Espesificidad!inportant.PNG" alt="">
+
+            <p>Dentro de la gerarquia CSS nada tiene más nivel que el <b>!inportant</b> por lo tanto lo que sea definido con tal no podra ser cambiado por ningun otro estilo, razon por la cual no es muy recomendable su uso salvo en casos muy marcados, ya que un mál uso de este pudiese generar errores o conflictos al diseñar una paguina.</p>
+        </section>
+    </main>
+</body>
+</html>

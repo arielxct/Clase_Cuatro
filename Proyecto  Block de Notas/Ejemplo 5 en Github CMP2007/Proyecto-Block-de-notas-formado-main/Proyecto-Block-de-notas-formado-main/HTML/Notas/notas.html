@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas a Tener en Cuenta</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
+            <li><a href="" class="CSS">CSS</a></li>
+            <li><a href="" class="JS">JS</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main>
+        <article>
+            <h1>Notas a recordar al utilizar HTML</h1>
+            <section id="descripcion">
+                <p>Algunas de las cosas que es necesario recordar al trabajar la estructura o funcionamiento de una paguina web con HTML son:</p>
+            </section>
+            <section id="notas">
+                <ol>
+                    <li>
+                        <p>Lo ideal es confiar en HTML para el contenido tanto como sea posible</p>
+                    </li>
+                    <li>
+                        <p><b>Una buena practica es tomarse el tiempo de pensar y definir la estructura que tendra la paguina, desde el como se estructurará, conectara por cuantas paguinas estara compuesta, que contenido alvergara, y el como se quiere que se vea entre otros aspectos (siempre es bueno dibujar o plasmar las ideas en borradores o referencias visuales)</b></p>
+                    </li>
+                    <li>
+                        <p>Lo mejor para una paguina es incluir contenido de terceros solo cuando es encesario, ya se por temás de derechos de autor, licencias o bulnerabilidades aprobechables por terceros mal intencionados </p>
+                    </li>
+                    <li>
+                        <p>Si es posible utilizar un servicio HTTPS para nuestra paguina, tener presente la seguridad de esta siempre debe ser primordial</p>
+                    </li>
+                    <li>
+                        <p>El anidamiento de las etiquetas debe de hacerse de forma correcta para evitar mal funcionamiento de los elementos, es decir el primer elementos en abrirse es el ultimo en cerrarse, y biceversa, por lo tanto nunca hay que mesclar el inicio y final de las etiquetas como se ve en el ejemplo, las etiquetas deben estar claramante dentro o fuera una de otras</p>
+                        <img src="./img/ejmRecordarAnidar.PNG" alt="">
+                    </li>
+                    <li>
+                        <p>Si escirbimos "lorem" en alguna etiqueta de texto emergere una recomendación del editor de texto, selecionarla se plasmara en la etiqueta un texto en latin, su unica función es actuar como un texto de relleno para que podamos emular el contenido de la paguina mientras esta es desarrollada </p>
+                    </li>
+                    <li>
+                        <p>Es posible aplicar más de una clase a los elementos HTML utilizando el atributo <b>"class"</b>, para hacerlo unicamente basta con dejar un espacio entre los nombres de las clases. </p>
+                    </li>
+                    <li>
+                        <p><b>Como pequeño recorrdatorio si se unde "alt+z" el codigo extenso mostrado en el editor de texto en vez de extenderse hacia la derecha de forma indefinida, se replegara y se alineara dentro de la pantalla</b></p>
+                    </li>
+                    <li>
+                        <p>Los atributos <b>booleanos</b> son aquellos que unicamnte tienen un valor, generamente es el mismo que el nombre del atributo por lo que estos atributos se implementan sin valor alguno </p>
+                        <img src="./img/ejmRecordarBooleano.PNG" alt="">
+                    </li>
+                    <li>
+                        <p>Se puede usar libre mente ya sea comillas dobles o simples ya que estas son equivalentes, lo que nunca debe pasar es que se mesclen en un mismo elemento</p>
+                        <img src="./img/ejmRecordarComillas.PNG" alt="">
+                        <p>Tambien se puede usar un tipo de comillas para los valores de los atributos y otro en el contenido.</p>
+                        <img src="./img/ejmRecordarComillas2.PNG" alt="">
+                        <p>Si se necesita incluir el mismo tipo de comillas en el contenido es necesario utilizar entidades HTML para estas.</p>
+                    </li>
+                    <li>
+                        <p>Dentro del elemento "head" no solo se definen los metadatos tambien se puede encotrar la descripción de la paguina para los moteres de busqueda</p>
+                    </li>
+                    <li>
+                        <b><p>Los comentarios dentro de HTML se aperturan con "&lt;!--" y se culminan con "--&gt;"</p></b>
+                    </li>
+                    <li>
+                        <p>El elemento "nav" de la barra de navegación se puede incluir como parte del encabezado o se puede manejar como un elemento independiente</p>
+                    </li>
+                    <li>
+                        <p>El elemento "main" solo deberia ser usado una vez por paguina ya que representa el contenido exclusivo de esta, tampoco deberia estar anidado dentro de otros elementos</p>
+                    </li>
+                    <li>
+                        <p><b>No utilizar demaciodos contenedores "div" ya que al no poseer un significado semantico puden ocacionar un codigo deficil de actualizar y mantener, lo recomendable es que solo se use si no existe una mejor opción para ese caso de uso</b></p>
+                    </li>
+                    
+                    <li>
+                        <p>Solo aplicar un unico "h1" por paguina</p>
+                    </li>
+                    <li>
+                        <p><b>No usar más de tres niveles de titulos en un documento, si son necesarios usar más lo recomedable es separar el xontenido en diferentes paguinas</b></p>
+                    </li>
+                    <li>
+                        <p>Actualmente no es muy recomendable usar los elementos "b", "i" y "u" ya que al no aportan semantica, almenos que se de el caso de que se necesite transmitir el significado tradicional de las negritas, en este caso si no hay otro elemento mejor para hacer esto seria correcto su uso</p>
+                        <p>Recordemos sus usos tradicionales:</p>
+                        <ul>
+                            <li><p><b>&lt;i&gt;</b> se usa para transmitir el significado que tradicionalmente transmite la itálica: extranjerismos, clasificaciones taxonómicas, conceptos técnicos, un pensamiento...</p></li>
+                            <li><p><b>&lt;b&gt;</b> se usa para transmitir el significado que tradicionalmente transmite la negrita: palabras clave, nombres de productos, frases principales...</p></li>
+                            <li><p><b>&lt;u&gt;</b> se usa para transmitir el significado que tradicionalmente conlleva el subrayado: nombres propios, errores ortográficos...</p></li>
+                            <p><b>Nota: normalmete el subrayado se asocia con los hipervinculos por lo que se recomienda puntualizar su uso o cambiar los estilos con CSS.</b></p>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Incluso los nombres de las imagenes son tomados en cuenta para el SEO (posicionamiento en los buscadores) de la paguina, por eso lo mejor es aplicar nombres descriptivos en estas</p>
+                    </li>
+                    <li>
+                        <p>Se puede incluir una imagen usando la URL absoluta o la URL relitiva, sin embargo aplicar la URL absoluta es desperdiciar tiempo y recursos ya que el navegador tiene que recorrer un camino más largo para encontrar la imgen, por lo tanto la solución más eficiente es usar la ruta relativa </p>
+                    </li>
+                    <li>
+                        <p>Si se adjunta una imagen de la que no se sea el propietario siempre tener presente:</p>
+                        <ul>
+                            <li><p>Tener un permiso escrito explicito del dueño de la imagen</p></li>
+                            <li><p>Se tetengan suficientes pruebas de que la imagen es de dominio público</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Recordar el uso del atributo "alt"(texto alternativo) en los elementos "img" ya que esto se mostrara en los casos en que la imagen no pueda ser mostrada al usuario o se use un leector de pantalla </p>
+                    </li>
+                    <li>
+                        <p>No solo es posible es utilizar los enlaces para apuntar a un documento o archivo, tambien podemos dirigirlos a alguna sección o elemento en espesifico de la paguina, para esto unicamente se necesita hacer referencia al atributo "id" del elemento en cestión, como se puede ver en el ejemplo</p>
+                        <img src="./img/Recordarenlaces2.PNG" alt="">
+                        <p>Tambien podemos hacer esto desde otra paguina, incluyendo el "id" al final de la ruta a la paguina:</p>
+                        <img src="./img/Recordarenlaces.PNG" alt="">
+                    </li>
+                    <li>
+                        <p>En caso de que se asigne un URL en el que se defina en que carpeta ingresar pero no a que archivo acceder la mayoria de los servidores buscan por defecto los archivos index cuando no se espesifica uno</p>
+                    </li>
+                    <li>
+                        <p>Los motores de busqueda tambien se fijan en el texto de los enlaces por lo tanto es bueno utilizar palabras claves para describirlos, esta tambien ayuda a los usuarios que ingresen en la paguina</p>
+                    </li>
+                    <li>
+                        <p>No escribir "enlace a" o "link" por que los leectores de pantalla ya anuncian los enlaces, y los usuarios comunes pueden distingirlos por sus estilos, por lo tanto es redundante</p>
+                    </li>
+                    <li><p>Incluir el contenido de reserva en los elemetos de video</p></li>
+                    <li><p>Tambien es recomendable incluir más de un formato de video para asegurar la compativilidad con diversos navegadores</p></li>
+                    <li>
+                        <p>Al uzar un elemento "iframe" es recomendable establecer el atributo "src" con JavaScript, para que primero se cargue nuestra paguina y luego el contenido incrustado, mejorando los tiempos de carga y la usabilidad </p>
+                    </li>
+                    <li>
+                        <p>Siempre que se embebe contenido en un iframe hacerlo desde un protocolo HTTPS ya que este elemento puede ser un punto de ataque mal intencionados</p>
+                    </li>
+                    <li>
+                        <p>Tambien es esencial siempre usar el atributo "sandbox" en el caso de usar un iframe ya que de ese modo se limitan las opcines que pudiese tener un ataque malicioso, del mismo modo una nota importante es que nunca debe agregar tanto "allow-scripts" como "allow-same-origin" a su atributo "sandbox"; en ese caso, el contenido incrustado podría pasar por alto la misma política de seguridad de origen que impide que los sitios ejecuten scripts y usar JavaScript para desactivar sandboxing por completo</p>
+                    </li>
+                    <li>
+                        <p>Recordar que un atributo indispensable para enviar los datos de un formulario es el atributo "name" ua que los datos son enviados en cadenas "clave/valor"</p>
+                    </li>
+                    <li>
+                        <p>No es recomendable anidar un formulario dentro de otro ya que est poede ocacionar comportamientos impredesibles, lo que si se puede es usar elementos de formularios que se encuentren fuera de este, todo esto atrabes del uso del atributo "for" </p>
+                    </li>
+                    <li>Es una practica comun usar listas o "div" para delimitar los elemenos de los formularios y aplicar estilos CSS más facilemnte, tambien en casos más complejos se usan elementos "section" y "fieldset" para agrupar en base a la funcionalidad de los elemetos </li>
+                </ol>
+            </section>
+        </article>
+    </main>
+</body>
+<footer>
+    <section>
+        <h2>Contacto</h2>
+        <a href="https://github.com/CMP2007"><img src="../../logos/contacto.jpg" width="150px" alt=""></a>
+        <p>Mi nombre es Carlos Miguel Puche Moreno estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+        <div id="facebook" class="contacto">
+            <h4>Facebook</h4>
+            <a href=""><img src="../../logos/logoFacebook.png" alt="" width="50px"></a>
+        </div>
+        <div id="instagram" class="contacto">
+            <h4>Instagram</h4>
+            <a href=""><img src="../../logos/logoInstagram.png" alt="" width="50px"></a>
+        </div>
+        <p>O contactando me a mi correo electronico</p>
+        <div id="Gmail" class="contacto">
+            <h4>Correo de contacto</h4>
+            <a href="mailto:puchecarlos@gmail.com"><img src="../../logos/LogoGmail.png" alt="" width="50px"></a>
+        </div>
+    </section>
+</footer>
+</html>

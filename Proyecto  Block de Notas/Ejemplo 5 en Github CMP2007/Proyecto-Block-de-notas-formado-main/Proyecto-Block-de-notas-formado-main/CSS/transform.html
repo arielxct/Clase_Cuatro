@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransoForm</title>
+</head>
+<body>
+    <main>
+        <h1>Propiedad TransoForm</h1>
+        <article>
+            <section>
+                <p>La función de esta propiedad es la de transformar el elemento en el que esta se aplique, lo cual esta propiedad puede hacerlo de barias maneras: </p>
+                <ul>
+                    <li><p><b>Desplacando el elemento</b> Ya sea vartical o horizontalmete con el uso de las propiedades:</p></li>
+                    <li><p><b>Escalando el elemento:</b> Ya sea haciendolo más grande o más chico</p></li>
+                    <li><p><b>Cambiando la forma del elemento</b> Añadiandole grados de inclinación</p></li>
+                </ul>
+                <p><b>Nota: La propiedad transform con el valor Translate es la mejor forma de hacer las animaciones y transiciones, ya que es la propiedad que menos cantidad de recursos consume, ya que unicamte desplaza al elemento de la animación a una nueva capa y lo modifica.</b></p>
+            </section>
+            <section>
+                <h2>Valores</h2>
+                <dl>
+                    <dt id="translateX"><h3>TranslateX</h3></dt>
+                    <dd>
+                        <p>Este valor indica que el elemento debera desplazarse <b>horizontalmete</b>, para el funcionamiento de este valor tambien debe de incluirse la distancia que el elemento se despalazara, para lo caul se incluye la cantidad en medidas dentro de paretensis.</p>
+                        <img src="img/transform1.PNG" alt="">
+                        <p><b>Nota: Si se da el caso de que se defina 100% como cantidad de desplazamiento el elementos se desplazada una distancia igual al tamaño de este, es decir si el elemento mide 100px el desplazamiento horizontal sera de 100px.</b></p>
+                        <p><b>Nota: Los valores positivos en esta propiedad traslada en elemento hacia la derecha y los negativos hacia la izquierda.</b></p>
+                    </dd>
+                    <dt id="translateY"><h3>TranslateY</h3></dt>
+                    <dd>
+                        <p>Este valor indica que el elemento debera desplazarse <b>verticalmete</b>, para el funcionamiento de este valor tambien debe de incluirse la distancia que el elemento se despalazara, para lo caul se incluye la cantidad en medidas dentro de paretensis.</p>
+                        <img src="img/transform2.PNG" alt="">
+                        <p><b>Nota: Si se da el caso de que se defina 100% como cantidad de desplazamiento el elementos se desplazada una distancia igual al tamaño de este, es decir si el elemento mide 100px el desplazamiento horizontal sera de 100px.</b></p>
+                        <p><b>Nota: Los valores positivos en esta propiedad traslada en elemento hacia abajo mientras que los negativos lo hacen hacia arriba.</b></p>
+                    </dd>
+                    <dt id="translate"><h3>Translate</h3></dt>
+                    <dd>
+                        <p>Se trata de la propiedad de abrebiatura de <b>translateX</b> y <b>translateY</b>, su función es simplemete realizar el mismo efecto que estas propiedades en una sola declaración, por lo que el fin de esta propiedad es sinplificar y optimizar el codigo CSS, esta propiedad recibe dos datos, cada uno referente a cada propiedad. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="img/transform3.PNG" alt="">
+                    </dd>
+                    <dt id="scale"><h3>Scale</h3></dt>
+                    <dd>
+                        <p>Este valor permite aumetar el tamaño de un elemento <b>X</b> numero de beces, para hacerlo esta propiedad multiplica las dimenciones del elemento por un valor numerico definido en la propiedad dentro de un parentesis, es decir el elemento se puede multiplicar por el numero que se desee, volviendose tan grande como se plazca, tambien es posible reducir su tamaño multiplcando las dimanciones de elemento por numeros menores a 1 como por ejemplo "0.5".</p>
+                        <img src="img/transform4.PNG" alt="">
+                        <p>Esta propiedad cuanta con diversas variantes que seccionana la funcionalidad de <b>scale</b>, estas propiedades son:</p>
+                        <ul>
+                            <li>
+                                <p><b>ScaleX: </b> Esta propiedad aumenta el tamaño del elemento unicamete en el eje <b></b></p>
+                                <p><b>ScaleY: </b> Esta propiedad aumneta el tamaño del elemento unicamete en el eje <b>Y</b></p>
+                                <p><b>ScaleZ: </b> Este valor no se aborda en el curso por su complejidad</p>
+                                <P><B>Scale3D: </B> Este valor no se aborda en el curso por su complejidad</P>
+                            </li>
+                        </ul>
+                        <p><b>Nota: Esta propiedad convierte los elementos en imagenes vectorizadas con el fin de que no se pierda calidad a la hora de agrandarlos.</b></p>
+                    </dd>
+                    <dt id="skew"><h3>Skew</h3></dt>
+                    <dd>
+                        <p>Este valor permite modificar la forma de los elementos añadiandole <b>x</b> cantidad de grados de inclinación a estos, ya que esta propiedad trabaja en base a grados unicamete acepta las siguites medidas como sus valores: <b>deg (grados)</b>, <b>rad (radianes)</b> y <b>grad (gradianes)</b>, entre todas estas medidas los más recomendables así como los más utilizados son los grados.</p>
+                        <p><b>Codigo</b></p>
+                        <img src="./img/transform6.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="./img/ejmTransform1.PNG" alt="">
+                        <p>Como se puede ver en el ejemplo, al aplicar esta propiedad en el contenedor su ejecto tambien influye en el contenido de este, para contrarestar esto la solución es aplicar una segunda propiedad <b>skew</b> al elemento hijo, peron con un valor inverso, para que de este modo ambas propiedades se contraresten y resulte en un contenedor inclinado pero un contenido sin ningun tipo de inclinación, de la siguiete forma.</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/transform7.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="./img/ejmTransform2.PNG" alt="">
+                    </dd>
+                </dl>
+                <p><b>Nota: Todas estas propiedades al fin y al cabo son valores de la propiedad "transform", por lo que se pueden aplicar a la vez desde un unico llamdo de esta, esto con el fin de poder aplicar más de un efecto  a la vez para obtener la mayor cantidad de posibilidades posible a la hora de crear un efecto.</b></p>
+                <img src="img/transform45.PNG" alt="">
+                <p><b>Nota: Es util tener en cuenta que al utilizar la propiedad "transform" en un evento esta sera sobre escrita asi que es necedario repetir cualquier valor que se desee conservar. </b></p>
+
+                <h4>Realmte la propiedad transform es inmensa, con un gran numero de posbles valores, en este apartodo tansolo se tocaron los vaolres basicos, sin embargo existen muchas más osibilidades, todas estas estan <a href="https://www.w3schools.com/cssref/css3_pr_transform.php">definidas en este enlace</a>, en caso que se necesiten o dese indagar más.</h4>
+            </section>
+            <section>
+                <h3>Propiedad Clip-path: polygon;</h3>
+                <p>como tal esta es una propiedad completamete independiente de <b>transform</b>, sin embargo al igual que esta permite trasnformar un elemento al cambiar la forma de este, debido a la gran relación en su efecto se hac referencia a esta propiedad en este apartado.</p>
+                <p>La propiedad<b>Clip-path</b> junto con el valor <b> plolygon</b> permite modificar la forma de los elementos a plaser, sin embargo para generar las formas se necesitan ingresar multiples tipos de datos, razon por la cual simplemte se suele utilizar un generador de <a href="https://bennettfeely.com/clippy/"><b>Clip-path</b></a> como el que se enceuntra en este enlace. </p>
+                <p><b>Codigo</b></p>
+                <img src="./img/clip-path.PNG" alt="">
+                <p><b>Resultado</b></p>
+                <img src="./img/ejmTransform3.PNG" alt="">
+            </section>
+        </article>
+    </main>
+</body>
+</html>

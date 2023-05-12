@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit</title>
+</head>
+<body>
+    <main>
+        <h1>Object-Fit y Object-Position</h1>
+        <article>
+            <section id="descripcion">
+                <p>Estas propiedades tiene la función la de regular el comportamiento de las imagenes para que estas se adecuen lo mejor posible a la paguina web, conserbando la mayor calidad posible, por defecto las imagenesen HTML modifican sus dimenciones para adaptarse al cotenedor en el que se encuentra y ocupar el 100% de este, razon por el cual es muy probable que la calidad de la imagen se vea afectada, tal como se puede ver en el siguite ejemplo, el cual muestra una imagen la cual se ingreso en un contenedor con dimenciones diferentes a las de la imagen origuinal:</p>
+                <h4>Codigo</h4>
+                <img src="./img/object-fit1.PNG" alt="">
+                <h4>Resultado</h4>
+                <img src="./img/ejmObject-fit1.PNG" alt="">
+                <p> Estos problemas de deformación y perdida de calidad son los que soluciona <b>object-fit</b> y <b>object-position</b></p>
+            </section>
+            <section>
+                <h2>Object-Fit</h2>
+                <p>Esta propiedad define la forma en la que el navegador trabaja las dimenciones de las imagenes,  esta propiedad cuenta con multiples valores, de los cuales cada uno define una forma de ajustar la imagen a la paguina de diferente forma, estos valores son: </p>
+                <dl>
+                    <dt id="contain"><h3>Contain</h3></dt>
+                    <dd>
+                        <p>Este valor evita que la escala de la imgen se modifique para ajustarse a su cotenedor, en otras palabras mantiene la imagen con su relación alto-ancho origuinale a la vez que la centra dentro de su cotenedor:</p>
+                        <h4>Codigo</h4>
+                        <img src="./img/object-fit2.PNG" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/ejmObject-fit2.PNG" alt="">
+                    </dd>
+                    <dt id="cover"><h3>Cover</h3></dt>
+                    <dd>
+                        <p>Este valor ajusta la imagen a su cotenedor, sin embargo en vez de estirarla alterando sus dimenciones lo que hace es un <b>"acercamiento a esta"</b>, a la vez que <b>recorta los bordes</b> de esta para adecuarla a las dimenciones del contenedor, en otras palabras este valor define que la imagen se afuste al cotenedor: </p>
+                        <h4>Codigo</h4>
+                        <img src="./img/object-fit3.PNG" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/ejmObject-fit3.PNG" alt="">
+                    </dd>
+                    <dt id="none"><h3>None</h3></dt>
+                    <dd>
+                        <p>Este valor realmente define que se incerte la imagen en el contenedor con sus dimenciones origuinales, literalmente este valor indica al navegador que no realise nungun tipo de cambio sobre la imagen o sus dimenciones, sin importar si esta es muy grande o muy pequeña para su cotenedor, razón por la cual es el valor con menos uso.</p>
+                    </dd>
+                    <dt id="Scale-Down"><h3>Scale-Down</h3></dt>
+                    <dd>
+                        <p>Este valor tiene la capacidad de aplicar cualquiera de los otros tres valores, <b>siempre seleccionando aquel que pueda integrar la imagen con las menores dimenciones</b>, por lo tanto segun las dimenciones de la paguina y de la imagen en cada ocación puede emplear cualquiera de los valores anteriormente nombrados, unicamente basandose en cual integra la imagen más pequeña.</p>
+                    </dd>
+                </dl>
+            </section>
+            <section>
+                <h2>Object-Position</h2>
+                <p>Esta propiedad define la forma en la que se posicionada la imagen en su contenedor, es decir el si esta estara centrada u orillada haca un borde u otro, esta propiedad cuenta con varios valores en función de las posiciones que pueden acptar las imagenes, estos valores son:  </p>
+                <ul>
+                    <li>
+                        <p><b>Left: </b> Define que la imagen este enfocada en su borde izquierdo</p>
+                    </li>
+                    <li>
+                        <p><b>Right: </b> Defin el si la imagen esta enfocada en su borde derecho</p>
+                    </li>
+                    <li>
+                        <p><b>top: </b> Defin el si la imagen esta enfocada en su borde superior</p>
+                    </li>
+                    <li>
+                        <p><b>button: </b> Defin el si la imagen esta enfocada en su borde inferior</p>
+                    </li>
+                </ul>
+                <p>Esta propiedad tambien acepta valores de medidas, los cules se emplean para desplazar la imagen, a la izquierda o a la derecha (valores positivos y negativos)</p>
+                <h4>Codigo</h4>
+                <img src="./img/object-position.PNG" alt="">
+                <h4>Resultado</h4>
+                <img src="./img/ejmObject-position.PNG" alt="">
+                <p><b>Nota: En el curso no probaron poner un segun valor para comprobar si este se ajustaria a el eje Y desplazando la imagen hacia arriba o hacia abajo, (PROBAR)</b></p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

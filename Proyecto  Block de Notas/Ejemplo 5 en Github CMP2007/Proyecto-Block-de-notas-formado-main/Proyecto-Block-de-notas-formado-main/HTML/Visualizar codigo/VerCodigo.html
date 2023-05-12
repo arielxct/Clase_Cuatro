@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visalizar codigo</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
+            <li><a href="" class="CSS">CSS</a></li>
+            <li><a href="" class="JS">JS</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main>
+        <article>
+            <h1>Representar codigo de forma corecta</h1>
+            <section id="descripcion">
+                <p>En ocaciones pudiese ser necesario representar algun codigo para el usuario, pero al tratarse de simbolos interpretados por el navegador no es posible incorporarlos sin más en el texto, para esto se utilizan diveroso metodos que seran desenglosados a continuación:</p>
+            </section>
+            <section>
+                <dl>
+                    <dt id="caracteresEspeciales"><h3>Inclusión de caracteres especiales en HTML (Entidades)</h3></dt>
+                    <dd>
+                        <p>Algunos simbolos forman parte de la sintaxis del codigo html, estos son llamados caracteres especialeso entidades, por ello para hacer posible su integraciaon a un texto, si se diese el caso, se crearon unos valores referenciales que al ser interpretados por el navegador arrojan como resultado dichos simbolos especiales </p>
+                        <img src="./img/equivalenciaCaracteres.PNG" alt="">
+                        <p>En <a href="https://es.wikipedia.org/wiki/Anexo:Referencias_a_entidades_de_caracteres_XML_y_HTML"><b>este enlace</b></a> se muestran una lista completa con todos las entidades usables en HTML, la mayoria no sera necesario emplearlos ya que la configuración UTF-8 implementada en la paguina los navegadores pueden interpretarlos casi todos.</p>
+                    </dd>
+                    <dt id="RepresentarCodigo"> <h3>Representar codigo Informatico de forma correcta</h3></dt>
+                    <dd>
+                        <p>Para estos casos se utilizan las siguientes etiquetas:</p>
+                <ul>
+                    <li><p><b>code:</b> Esta etiqueta se utiliza para mostrar literalmente el codigo que esta etiqueta encapsule, en otras palabras cualquier codigo que se escriba dentro de esta etiqueta no sera interpretado por el navegador, si no que a su vez sera mostrado al usuario  </p></li>
+                    <li><p><b>pre:</b> Por defecto el navegador no tiene en cuanta los espacios en blanco extra que se ingresen en el codigo, sin embargo justo ese es el efecto de esta biñeta, en el texto que se ingrese en el interior de esta el navegador plasmara toda la estructura, incluyendo saltos de linea y tab entre otros</p></li>
+                    <li><p><b>kbd:</b> Esta etiqueta muestra al texto dentro de esta con una fuente que se reserva particularmete para representar entradas de datos en el teclado o en el navegador (comandos de teclas) </p></li>
+                    <li><p><b>samp:</b> Esta etiqueta muestra al texto dentro de esta con una fuente que se reserva particularmente para representar salidas de datos de un programa del navegador</p></li>
+                </ul>
+                <p>Acontinuación se muestran los ejmeplos de uso de estas etquetas:</p>
+                <p><b>Codigo:</b></p>
+                <img src="./img/mostrarCodigo1.PNG" alt="">
+                <img src="./img/mostrarCodigo2.PNG" alt="">
+                <p><b>visualización:</b></p>
+                <img src="./img/mostrarCodigo3.PNG" alt="">
+                <img src="./img/mostrarCodigo4.PNG" alt="">
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+<footer>
+    <section>
+        <h2>Contacto</h2>
+        <a href="https://github.com/CMP2007"><img src="../../logos/contacto.jpg" width="150px" alt=""></a>
+        <p>Mi nombre es Carlos Miguel Puche Moreno estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+        <div id="facebook" class="contacto">
+            <h4>Facebook</h4>
+            <a href=""><img src="../../logos/logoFacebook.png" alt="" width="50px"></a>
+        </div>
+        <div id="instagram" class="contacto">
+            <h4>Instagram</h4>
+            <a href=""><img src="../../logos/logoInstagram.png" alt="" width="50px"></a>
+        </div>
+        <p>O contactando me a mi correo electronico</p>
+        <div id="Gmail" class="contacto">
+            <h4>Correo de contacto</h4>
+            <a href="mailto:puchecarlos@gmail.com"><img src="../../logos/LogoGmail.png" alt="" width="50px"></a>
+        </div>
+    </section>
+</footer>
+</html>

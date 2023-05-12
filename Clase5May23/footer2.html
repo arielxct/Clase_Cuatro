@@ -1,0 +1,41 @@
+function ajustarPie() {
+    var winH = $(window).height();
+    var docH = $("body").height();
+    var pieH = $("footer").height();
+    
+    if (docH + pieH < winH) {
+      $("footer").attr("class", "bottom");
+      } else {
+        $("footer").attr("class", "");
+        }
+    }
+  
+  $(document).ready(ajustarPie);
+  $(window).on("resize", ajustarPie);
+  footer {
+    position:absolute;
+    height:50px;
+    line-height:50px;
+    background:black;
+    color:white;
+    text-align:center;
+    left:0;
+    width:100%;
+  }
+  
+  footer.bottom {
+    bottom:0;
+    }
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+  <header>LOGO</header>
+  <main>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+    <p>Párrafo 4</p>
+    <p>Párrafo 5</p>
+  </main>
+  <footer>
+    2016 &copy; Nombre empresa
+  </footer>

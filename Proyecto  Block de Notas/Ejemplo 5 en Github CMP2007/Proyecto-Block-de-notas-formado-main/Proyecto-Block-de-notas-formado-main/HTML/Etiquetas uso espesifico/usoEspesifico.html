@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas con usos espesificos</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
+            <li><a href="" class="CSS">CSS</a></li>
+            <li><a href="" class="JS">JS</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main>
+        <article>
+            <h1>Etiquetas con uso espesificos</h1>
+            <section id="descripcion">
+                <p>Se tratan de etiquetas creadas con el fin de cumplir con roles espesificos, esto no significa que sean elementos inutiles o poco relevantes, ya que segun cual sea el caso de uso cualquiera de estas etiquetas puede ser muy util siempre que sea bien empleada, son etiquetas con usos simples y faciles de entender.</p>
+            </section>
+            <section id="etiquetas">
+                <dl>
+                    <dt id="A"><h3>A</h3></dt>
+                    <dd>
+                        <p><b>Significa "ancla," es la biñeta utilizada para definir los hipervinculos, el texto que se desee mostrar como enlace debera estar ubicado dentro de esta biñeta.</b></p>
+                        <p>Esta biñeta no solo redirigue al usuario a otra paguina, si no que tambien puede llevarlo a una sección en espesifico de esta, esto se hace añadienso un "#" seguido del id del elemto que se desee ubicar, (todo esto escrito sin espacios), ya que el "#" hace referencia al id de un elemto. De la misma forma tambien se puede re-dirigir a una sección dentro del mismo documento, esto se hace unacmente escribiendo el "# "seguido del id del elemto seleccionado.</p>
+                        <p>A continuación se muestran dos ejemplos el primero es de una re-dirección a un elemto del mismo documeto, y el segundo a una redirección a un area en particular de un documeto externo.</p>
+                        <img src="./img/re-Dir1.PNG" alt="">
+                        <img src="./img/re-Dir2.PNG" alt="">
+
+                        <h4>Atributos</h4>
+                        <ul>
+                            <li><p><b>href:</b> Es el atributo designado para indicar la dirección http a la quu el encase dirigirá al usuario, puede ser una ubicación interna o externa de la pagina</p></li>
+                            <li><p><b>tittle:</b> Esta etiqueta define el un texto explicativo que hará aparición si el usuario mantiene el raton sobre el enlace, por lo tanto no sera visible para usuarios que navegen usando el teclado o dispositivos tactil</p></li>
+                            <li><p><b>target:</b> Este atributo define la ventana en la que se abrira el nuevo enlace, si se usa el valor "_blank" se abrira la nueva pagina en una pestaña diferete, en cambio si se omite este atributo el enlace se abrira por defecto en la pestaña activa</p></li>
+                        </ul>
+                        <p><b>Nota: cualquier elemeto puede ir dentro de la biñeta "a", por lo tanto casi cualquier casa puede ser convertida en un en unlace, desde contenedores e imagenes etc.</b></p>
+                        <p><b>Nota: Es recomedable que los enlaces brinden palabras claves o algun tipo de información sobre la información a la que re-dirigen ya que tanto los usuarios como los motores de lectura escanean la paguina y uno de los elemtos resaltados en los que se guian son los enlaces.</b></p>
+                        <p><b>Nota: Otros consejos al crear enlaces son: que el texto que los componga sea breve, los textos exsivamente largos no son gratos, tambien es recomendable evitar que el texto de estos enlaces sea repetitivo, ejemplo de mala practica: "Haz clic aquí".</b></p>
+                        <p><b>Nota: Es recomedable usar las direcciones relativas de archivos siempre que sea posible, ya que pese a que deja de funcionar si el archivo en el que se encuentra el llamado cambia de lugar, estas son más efiientes en terminos de procesamiento y más legibles en el cosido, por lo que daran un codigo más legible.</b></p>
+
+                        <h4>Descargar un archivo en un enlace</h4>
+                        <p>Para indicar que se trata de la descarga de un elemento se utiliza el atributo "download", el cual no solo indicara que el navegador debe descargar el elemento seleccionado si no que tambien define el nombre que se vinculara al archivo al hacerlo (esto lo hace en base al texto que se indique en el atributo).</p>
+                        <img src="./img/ejmADowload.PNG" alt="">
+
+                        <h4>Enviar un correo mediante un enlace</h4>
+                        <p>Esta es otra función que ofrece la etiqueta "a", para aser uso de esta se utiliza el valor "mailto", en el atributo "href" seguido del correo electronico al que se desee que el usuario contacte, esto abrira una ventana de correo electronico con el correo en cuestion selecionado como destinatario, a su vez otra opción es poner el atributo "href" unicamnte con valor de "mailto" esto abrira la venta de correo pero no proveera un destinatario en espesifico.</p>
+                        <p>El siguiente es un correo de como se usa el atributo "mailto":</p>
+                        <img src="./img/ejemMailto.PNG" alt="">
+                    </dd>
+                    <dt id="br"><h3>Br</h3></dt>
+                    <dd>
+                        <p>Esta la función de esta etiqueta es muy simple, <b>indica un salto de linea</b>, sin importar realmente en que lugar o contenedor se encuentre siempre tendra el mismo efecto el cual es equivalente a presionar Enter en un editor de texto.</p>
+                        <p>Si se utiliza en el interior de una etiqueta "p" (parrafo) esta biñeta aplicara el mismo efecto que tendria un "punto y aparte", por lo tanto el texto saltara a la siguiete linea pero no se distanciara de la linea anterior ni tomara sangria, por lo tato se puede usar para representar lineas cortas como las de un verso.</p>
+                    </dd>
+                    <dt id="details"><h3>Details</h3></dt>
+                    <dd>
+                        <p>Actua com un widget de revelación, ya que tiene la funcionalidad de mostrar un texto oculto el cual se repliega o muestra cuando se clickea sobre este, es un elemento de contenido dinamico, es necesario tener presente que se trata de una etiqueta baste reciente por lo tanto no esta abilitada en verciones antiguas de los navegadores, a su vez puede ser ubicada en cualquier elemento que acepte contenido dinamico.</p>
+
+                        <h4>Atributos</h4>
+                        <ul>
+                            <li><p>"Details" incluye los <b>atributos globales</b></p></li>
+                            <li><p><b>open:</b> Este atributo Booleano indica si los detalles serán mostrados al usuario cuando la página se cargue, por defecto el valor es false y por lo tanto los detalles estarán ocultos</p></li>
+                        </ul>
+                        <p>A continuación se muestran dos ejemplos el primero consiste en una imagen ejemplo del codigo del elmento y el segundo ejemplo se trata de del resultado de este codigo:</p>
+
+                        <h4>Ejemplo</h4>
+                        <img src="./img/ejmDetails.PNG" alt="ejemplo details">
+
+                        <h4>Efecto</h4>
+                        <details>
+                            <summary>Some details</summary>
+                            <p>More info about the details.</p>
+                        </details>
+                    </dd>
+                    <dt id="hr"><h3>Hr</h3></dt>
+                    <dd>
+                        <p>Esta es otra etiqueta con una función simple, de aplicarse crea una linea horizontal en el contenedor en que se encuentre, se utiliza para crear divicones visuales.</p>
+                        
+                        <h4>Ejemplo de visualización</h4>
+                        <p>Primer elemto</p>
+                        <hr>
+                        <p>Segundo elemto</p>
+                    </dd>
+                    <dt id="time"><h3>Time</h3></dt>
+                    <dd>
+                        <p>Existen muchas formas de plasmar una fecha, sin mencionar que esto puede representarse de forma deferente en algunos lugares, para eso se utiliza el elemto <strong>"time"</strong>, acompañado del atributo <strong>"datetime"</strong>, ya que este elemto tiene la ventaja de que funciona para cualquier formato de fecha (hora, dia, mes, año) así como para las mesclas de estos.</p>
+                        <p>Su uso consiste en ingresar la fecha dentro del atributo "datetime" con el formato adecuado para que sea entendible por el navegador, a su vez dentro de la etiqueta se ingresa la fecha de la forma que sera visible para los usarios, de esa forma el usuario puede visualizar cualquiera que sea el formato de fecha con el que este familiarizado, sin que el navegador presente algun error</p>
+                        <h4>Elemplos de aplicación</h4>
+                        <img src="./img/ejmTime.PNG" alt="">
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+<footer>
+    <section>
+        <h2>Contacto</h2>
+        <a href="https://github.com/CMP2007"><img src="../../logos/contacto.jpg" width="150px" alt=""></a>
+        <p>Mi nombre es Carlos Miguel Puche Moreno estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+        <div id="facebook" class="contacto">
+            <h4>Facebook</h4>
+            <a href=""><img src="../../logos/logoFacebook.png" alt="" width="50px"></a>
+        </div>
+        <div id="instagram" class="contacto">
+            <h4>Instagram</h4>
+            <a href=""><img src="../../logos/logoInstagram.png" alt="" width="50px"></a>
+        </div>
+        <p>O contactando me a mi correo electronico</p>
+        <div id="Gmail" class="contacto">
+            <h4>Correo de contacto</h4>
+            <a href="mailto:puchecarlos@gmail.com"><img src="../../logos/LogoGmail.png" alt="" width="50px"></a>
+        </div>
+    </section>
+</footer>
+</html>

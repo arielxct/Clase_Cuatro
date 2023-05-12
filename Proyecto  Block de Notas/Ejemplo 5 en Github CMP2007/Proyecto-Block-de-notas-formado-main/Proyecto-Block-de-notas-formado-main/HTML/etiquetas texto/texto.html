@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de texto</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
+            <li><a href="" class="CSS">CSS</a></li>
+            <li><a href="" class="JS">JS</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <main>
+        <article>
+            <h1>Etiquetas de texto</h1>
+            <section id="Descripcion">
+                <p>Este apartado se trata de todas aquellas atiquetas cuya función consiste en modificar o ajustar la forma en la que se visualizara el texto de un elemento.</p>
+            </section>
+            <section id="etiquetas">
+                <dl>
+                    <dt id="abbr"><h3>Abbr</h3></dt>
+                    <dd>
+                        <p>Se trata de una etiqueta para definir las abreviaturas, su efecto es que la abreviatura o el acronimo se mostrara con un subrayado puntuado, y al posicionar el raton sobre este se mostrara un texto emergente con la expresión completa del termino, para definir la expresión completa se utiliza el atributo "title", seguido de la expresión.</p>
+                        <img src="./img/ejmAbrebiatura.PNG" alt="">
+                    </dd>
+                    <dt id="b"><h3>B</h3></dt>
+                    <dd>
+                        <p>Su función unicamnte es la de mostrar el texro que se encuentre dentro de esta etiqueta en negritas, no añade ningun valor semantico a este.</p>
+                    </dd>
+                    <dt id="em"><h3>Em</h3></dt>
+                    <dd>
+                        <p>Se usa para dar un poco de énfasis o relevancia a algun texto, el texto dentro de esta biñeta se muestra en cursiva.</p>
+                    </dd>
+                    <dt id="i"><h3>I</h3></dt>
+                    <dd>
+                        <p>Consiste en una etiqueta para mostrar el texto en cursiva o italica, no brinda ningun valor semantico.</p>
+                    </dd>
+                    <dt id="span"><h3>Span</h3></dt>
+                    <dd>
+                        <p>Tal y com se menciono en el apartado de <a href="../etiquetas estructura/estructura.html">etiquetas de estructura</a> se trata de una etiqueta no semantica de texto, por lo tanto su función es incorporarlo en el interior de un texto para hacer posible distinguir algun area del texto sin añadirle algun valor semantico. Esto se puede lograr usando el atributo "class" para poder incorporar css.</p>
+                        <p><b>Nota: por si mismo el navegador no muestra algun estilo en particular al texto que se encuentre en este elemto.</b></p>
+                    </dd>
+                    <dt id="sup_sub"><h3>Superíndice y Subíndice</h3></dt>
+                    <dd>
+                        <p>En ocaciones puede ser necesario incorporar estos elemtos en algun texto, para ello existen estas dos etiquetas:</p>
+                        <ul>
+                            <li><p><b>sup: </b> Esta etiqueta se usa para el definir el <b>superíndice</b>, lo hace encacillando a esté en su interior</p></li>
+                            <li><b>sub: </b> Esta etiqueta se usa para definir el <b>subíndice</b>, lo hace encacillando a este en su nterior</li>
+                        </ul>
+                        <p>Un ejemplo de ambos casos es el siguiente</p>
+
+                        <h4>Codigo</h4>
+                        <img src="./img/ejmSupSub1.PNG" alt="">
+
+                        <h4>visualización</h4>
+                        <img src="./img/ejmSupSub2.PNG" alt="">
+                    </dd>
+                    <dt id="strong"><h3>Strong</h3></dt>
+                    <dd>
+                        <p>Se usa para darle gran importancia al texto dentro de esta biñeta, se muestra como texto en negritas.</p>
+                    </dd>
+                    <dt id="u"><h3>U</h3></dt>
+                    <dd>
+                        <p>Su función unicamnte es la de mostrar el texro que se encuentre dentro de este subrayado, no añade ningun valor semantico a este.</p>
+                    </dd>
+                </dl>
+            </section>
+            <section id="CitarContenido">
+                <h2>Etiquetas para Citar Contenido</h2>
+                <p>Una peculiaridad de HTML es que entre tantos elementos tambien existen algunos con la función en espesifico de estructurar las citas de texto de forma adecuada, en base al tipo de cita se emple un elemento diferente segun el caso.</p>
+                <dl>
+                    <dt id="CitasIndependiente"><h3>Citas en bloque independiente</h3></dt>
+                    <dd>
+                        <p>Para estos casos de utiliza el elemento <b>&lt;blockquote&gt;</b>, el cual debe encasillar una etiqueta "p" con la cita, esta se mostrara como un parrafo con sangria a la izquierda y derecha, tambien es importante utilizar el atributo "cite=' ' """,  en este se puede ingresar una URL que apunte a la fuente de la cita.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/ejmCitas1.PNG" alt="">
+                        <p><b>Nota: Este tipo de cita indica que es una cita ampleada.</b></p>
+                    </dd>
+                    <dt id="CitasLinea"><h3>Citas en Linea</h3></dt>
+                    <dd>
+                        <p>Estas funcionana igual que las citas en bloque, con la diferencia de que se utiliza la biñeta <b>"q"</b>, la cual se incorporan dentro del elemento "p", encasillando unicamnte las palabras deceadas, el resultado será que la cita se mostrara entre comillas. </p>
+                        <img src="./img/ejmCitas2.PNG" alt="">
+                        <p><b>Nota: Estas indican que se trata de nua cita brebe que no necesita de un salto de linea.</b><p>
+                    </dd>
+                    <dt id="fuente"><h3>Incorporar la Fuente de la Paguina</h3></dt>
+                    <dd>
+                        <p>El atributo "cite" parece util pero los buscadores o motores de lectura no hacen nada con el, por lo tanto la mejor forma de incorporar a la fuente en la paguina es utilizando un enlace(a), para esto simlemente incorporamos este elemto en la redacción de forma que el enunciado o el tipo de cita lo permita, con el URL que diriga a la fuente deseada. </p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+<footer>
+    <section>
+        <h2>Contacto</h2>
+        <a href="https://github.com/CMP2007"><img src="../../logos/contacto.jpg" width="150px" alt=""></a>
+        <p>Mi nombre es Carlos Miguel Puche Moreno estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+        <div id="facebook" class="contacto">
+            <h4>Facebook</h4>
+            <a href=""><img src="../../logos/logoFacebook.png" alt="" width="50px"></a>
+        </div>
+        <div id="instagram" class="contacto">
+            <h4>Instagram</h4>
+            <a href=""><img src="../../logos/logoInstagram.png" alt="" width="50px"></a>
+        </div>
+        <p>O contactando me a mi correo electronico</p>
+        <div id="Gmail" class="contacto">
+            <h4>Correo de contacto</h4>
+            <a href="mailto:puchecarlos@gmail.com"><img src="../../logos/LogoGmail.png" alt="" width="50px"></a>
+        </div>
+    </section>
+</footer>
+</html>

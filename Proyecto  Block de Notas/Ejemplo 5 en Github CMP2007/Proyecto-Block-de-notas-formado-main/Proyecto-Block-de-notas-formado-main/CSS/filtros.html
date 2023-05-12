@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folstros CSS</title>
+</head>
+<body>
+    <main>
+        <h1>Filtros CSS</h1>
+        <article>
+            <section id="descripcion">
+                <p>CSS cuanta con recursos para aplicar dibersos tipos de filtros a las imagenes, para lo cual se utiliza la propiedad <b>filter</b>, la cual cuanta con dibersos valores acordes a los dibersos tipos de fimtros disponibles. </p>
+                <p>Una caracteristica de esta propiedad es que se puede definir más de un valor por llamado, es decir se puede definir todos los filtros en un solo llamado de la propiedad.</p>
+            </section>
+            <section id="filtros">
+                <h2>Filtros</h2>
+                <dl>
+                    <dt id="none"><h3>None</h3></dt>
+                    <dd>
+                        <p>Se trata del valor por defecto de la propiedad, como su nombre lo indica define que no se le aplique ningun tipo de filtro a la imagen.</p>
+                    </dd>
+                    <dt id="blur"><h3>Blur</h3></dt>
+                    <dd>
+                        <P>Este valor aplica un <b>desenfoque</b> a la imagen, para trabajar esta imgen acepta cualqueir tipo de unidad de medida</P>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter1.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter1.PNG" alt="">
+                    </dd>
+                    <dt id="brightness"><h3>Brightness</h3></dt>
+                    <dd>
+                        <p>Este valor define la cantidad de <b>brillo</b> que se le aplicara a la imagen, donde "0" es completamete oscura y "1" es el brillo normal de la imagen, se puede aplicar cualqueer otro valor positivo o decimal </p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter2.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter2.PNG" alt="">
+                        <p>En este ejmplo se palica diez(10) veces el briyo normal de la imagen, realmte se puede aplicar el valor que se dese, incluso 100</p>
+                    </dd>
+                    <dt id="contrast"><h3>Contrast</h3></dt>
+                    <dd>
+                        <p>Este valor aplica <b>contraste</b> a los colres de la imagen, donde "0" es nada de contraste y "1" es el contraste normal de la imagen, a su vez se puede usar el valor positivo entero o decimal que se desee</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter3.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter3.PNG" alt="">
+                        <p>En este ejmplo se le da a la imagen un contraste tres (3) veces mayor al original.</p>
+                        <p><b>Nota: en este valor tambien se puede usar porcentajes, donde "100%" es igual a "1"</b></p>
+                        <p><b>Nota: este valor necesita que se defina un color de fonfo para funcionar adecuadamete, ya que su función es generar el contraste entre el cntenido y el fondo.</b></p>
+                    </dd>
+                    <dt id="drop-shadow"><h3>Drop-shadow</h3></dt>
+                    <dd>
+                        <p>Este valor permite aplicar una <b>sombra a aquellas imagenes de fondo transparente</b>, para funcionar reqiere de tres valores en <b>px</b>  y que se defina el color de la sombra.</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter4.PNG" alt="">
+                        <p>Estos valores en px definen las dimenciones de la sombra </p>
+                        <p><b>original</b></p>
+                        <img src="./img/ejmFilter4,5.PNG" alt="">
+                        <p><b>Aplicando la propiedad</b></p>
+                        <img src="img/ejmFilter4.PNG" alt="">
+                        <p>Una caracteritica de este valor es que podemos aplicarlo varias veces en el mismo llamado para reforzar su efecto, logrando un resultado semejante a esto:</p>
+                        <img src="img/ejmFilter4-nota.PNG" alt="">
+                        <p>Literalmente copiando y pegando este valor con todos sus parametros dentro de la propiedad se logra este tipo de resultado, en este caso para lograr el efecto anterior se aplico el siguite valor repetidas veces.</p>
+                        <img src="img/filter4.5.PNG" alt="">
+                    </dd>
+                    <dt id="grayscale"><h3>Grayscale</h3></dt>
+                    <dd>
+                        <p>Este valor denera la imagen en una <b>escala de grises (blanco y negro)</b>, donde "0" es nada de filtro y "1" es blanco y negro</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter5.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter5.PNG" alt="">
+                        <p><b>Nota: En este valor los numeros mayores a "1" no surten un efecto que los diferencie de este, lo que si genera un efcto es utilizar porcentajes (%) y decimales para definir el valor</b> </p>
+                    </dd>
+                    <dt id="hue-rotate"><h3>Hue-rotate</h3></dt>
+                    <dd>
+                        <p>Este valor permite <b>rotar la escala de colores</b>, esta propiedad trabaja con deg (grados) como su unidad numerica, sin embargo tambien acepta radianes y gradianes, sin embargo la medida más reomendable es grados, es decir en base al valor que se introduzca permite cambiar los colores de la imagen.</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter6.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter6.PNG" alt="">
+                    </dd>
+                    <dt id="invert"><h3>Invert</h3></dt>
+                    <dd>
+                        <p>Este valor permite <b>invertir los colores</b>, donde "0" son los colores originales y "1" son los colores completamete invertidos, por lo tanto para definir la intencidad de la propiedad se utiliza los numeros decimales entre "0" y "1", tambien se puede utilizar decimales (%) para hacerlo</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter7.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter7.PNG" alt="">
+                        <p><b>Nota: debido a la naturaleza de los colores el valor medio entre "1" y "0" (50% - 0.5) genera una escala grises, ya que el color original mesclado con el mismo color invertido se anulan entre si, del mismo modo que ejm 10-10=0.</b></p>
+                    </dd>
+                    <dt id="opacity"><h3>Opacity</h3></dt>
+                    <dd>
+                        <p>Este valor aplica una <b>transpaencia</b> sobre la imagen, en esta propedad "0" es completamente vicible y "1" es completamente transparente, por lo tanto para definir la intencidad se utilizan decimales o porcentajes. </p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter8.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter8.PNG" alt="">
+                    </dd>
+                    <dt id="saturate"><h3>Saturate</h3></dt>
+                    <dd>
+                        <p>Este valor añade una <b>saturación</b> a la imagen, donde  "0" es igual a ninguna saturación y "1" es igual a la saturación original de la imagen, por lo tanto para definir la intencidad se utilizan numeros positivos enteros o decimales o  porcentajes. </p>
+                        <p>El efecto de esta propiedad se puede parecer a la de <b>contrast</b>, pero la diferencia entre ambas es que <b>contrast</b> genera el mayor contraste posble entre los colres, mientras que <b>saturate</b> aproxima los colres a su mayor intencidad posible.</p>
+                        <p><b>Codigo</b></p>
+                        <img src="img/filter9.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter9.PNG" alt="">
+                        <p>En este ejmplo se aplica una saturación de "400%" es ddecir una saturación catro beces mayor a la horiginal, tambien se podria usar el valor "4" para obtener el mismo efecto</p>
+                    </dd>
+                    <dt id="sepia"><h3>Sepia</h3></dt>
+                    <dd>
+                        <p>Esta valor aplica el efecto <b>sepia</b> en la imagen, donde "0" es igual a ningun efecto y "1" es igual a compltamete aplicado el efecto, por lo tanto cualqueer valor mayor a "1" no genera ninguna diferencia, por ello en este valor su intencidad se puede definir con el uso de decimales y porcentajes</p>
+                        <p><b>codigo</b></p>
+                        <img src="img/filter10.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="img/ejmFilter10.PNG" alt="">
+                    </dd>
+                    <dt id="url"><h3>Url</h3></dt>
+                    <dd>
+                        <p>Esta valor realmente no es abarcado por el curso, sin embargo su fuinción es la permitir incluir filtros propios, si se desea indagar más se puede buscar un tutorial por internet.</p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

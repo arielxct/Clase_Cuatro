@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propierdades de Texto</title>
+</head>
+<body>
+    <main>
+        <h1>Propiedades de texto CSS</h1>
+        <h3>A continuación se definen las diferentes propiedades para el texto disponbles en CSS:</h3>
+        <section>
+            <dl>
+                <dt id="font-size"> <h3>Font-Size</h3></dt>
+                <dd>
+                    <p>Se trata de la propiedad encargada de definnir el tamaño del texto, requiere que se le ingrese un valor númerico en alguno de los diferentes tipos de medidas que reconoce, para definir el tamaño del texto, el tamaño correspondiente a cada unidad numerica utilizada puede cambiar segun pual sea la unidad de medida utilizada. </p>
+                    <p>Las medida que acepta pueden agruparse en dos grupos:</p>
+                    <ul>
+                        <li>
+                            <p><b>Medidas Fijas: </b>Son aquellas expresadas en valores fijos y estandarizados que no depende de ningun factor externo, sin importar la sircunstancia siempre se expresaran en la misma dimención, las diferentes medidas de este tipo son:</p>
+                            <ul>
+                                <li><p><b>PX: </b> pixeles</p></li>
+                                <li><p><b>Cm:</b> Centimetros</p></li>
+                                <li><p><b>mm: </b> Milimetros</p></li>
+                                <li><p><b>Pt: </b> Puntos</p></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><b>Medidas Relativas: </b>Se tratan de aquellas medidas que estan sujetas a las caracteriticas del contendor en el que se encuentran, son empleadas principalmente para los diseños responsive, ya que se ajustan en base a los cambios que ocurran en el contenedor en cuestión, las medidas aceptadas de este tipo son:</p>
+                            <ul>
+                                <li>
+                                    <p><b>Rem:</b></p>
+                                </li>
+                                <li>
+                                    <p><b>Em: </b> Esta unidad de medida cambia su valor en función de las dimenciones del contenedor del elemento actual, por lo tanto se basa en la herencia para definir el valor de cada unidad "em", para definir su valor toma encuenta propiedades como padding, margin, font-size y basicamente cualquier propiedad que acepte valores de medidas, que se aplique en el contenedor. </p>
+                                </li>
+                                <li>
+                                    <p><b>Viewport: </b> Se trata de un valor que se ajusta en referencia a las dimenciones de la pantalla del dispositivo.</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><b>Nota: todas estas medidas se desenglosan de mejor forma en el apartado <a href="./teoriaMedidas.html">Teoria de las medidas</a>.</b></p>
+                </dd>
+
+                <dt id="font-family"><h3>Font-Family</h3></dt>
+                <dd>
+                    <p>Se trata de la propiedad encargada de definir la <b>tipografia</b> aplicada en la paguina o elemento en cuestión.</p>
+                </dd>
+
+                <dt id="line-height"><h3>Line-Height</h3></dt>
+                <dd>
+                    <p>Esta propiedad define la altura de la linea del texto, para funcionar toma como base las dimenciones de texto actual, el concepto del funcionamiento de su medida es el siguiente.</p>
+                    <p>Por defecto el valor de esta propiedad es de 1, lo que resulta en que las dimenciones de la linea sean iguales al espacio ocupado por el texto.</p>
+                    <img src="./img/line-height1.PNG" alt="">
+                    <p>Esta medida toma como punto de origen la mitad del texto, distribuyendo la mitad de sus dimenciones hacia arriba y hacia abajo de la siguiete forma:</p>
+                    <img src="./img/line-height2.PNG" alt="">
+                    <p>Por lo tanto sea cual sea el valor asigando a esta propiedad la mitad de este define la distancia del extremo superior de la linea despecto al centro del texto, mientra que la otra mitad hace lo propio con el extremo inferior. </p>
+                    <p>La altura de la linea puede ser modificada para ocupar un espacio mayor al ocupado por el texto de la siguiente forma:</p>
+                    <img src="./img/line-height3.PNG" alt="">
+                    <p>De esta forma se puede generar separación entre las diferentes lineas de un texto, creando estilos más entendibles y amigables para la vista,  </p>
+                    <p><b>Nota: A "line-height" se le puede asignar cualquier valor, incluyendo decimas, simplemente se utilizaron valores enteros para el ejemplo para facilitar la explicación, lo importante es entender que sea cual sea en valor aplicado este se dividira en dos, cada mitad de este se asignara a los secmentos superior e inferior de la linea. </b></p>
+                </dd>
+                <dt id="font-weight"><h3>Font-Weight</h3></dt>
+                <dd>
+                    <p>Se trata del grosor de las letras de la fuente, su valor se aplica en cientos es decir 100, 200, 300, etc hasta llegar a los 900.  </p>
+                    <p>El efecto de esta propiedad pude variar segun cual sea la fuente utilizada ya que en algunas se genera diferenciación con cada valor, mientras que otras pude que variaciones de valor pequeñas como de 100 a 200 no generen una diferencia en el texto</p>
+                    <h4>por ejemplo en la siguiete fuente se aplico inicialmente un valor de 100 seguido de uno de 700. </h4>
+                    <img src="./img/fontweight1.PNG" alt=""><br>
+                    <img src="./img/fontweight2.PNG" alt="">
+                </dd>
+                <dt id="text-aling"><h3>Text-aling</h3></dt>
+                <dd>
+                    <p>La función de esta propiedad es bastate simple, define el donde se ubicara el texto en función a su contenedor, los posibles valores de esta porpiedad son:</p>
+                    <ul>
+                        <li><p><b>Cente: </b> Establece que el texto se ubique en el centro del contenedor</p></li>
+                        <li><p><b>Justify: </b> Establece que el texto se justufique dentro de su contenedor</p></li>
+                        <li><p><b>Left: </b> Establece que el texto se ubicara a la izquierda del contenedor</p></li>
+                        <li><p><b>Right: </b> Establece que el texto se ubicara a la derecha del contendor</p></li>
+                        <li><p><b>Start: </b> define que el texto se ubicara en la parte superior del contenedor/p></li>
+                        <li><p><b>End: </b>Define que el texto de ubicara en la parte inferior del contenedor</p></li>
+                    </ul>
+                </dd>
+                <dt id="direction"><h3>Direction</h3></dt>
+                <dd>
+                    <p>Se trata de una alternativa a la propiedad <b>text-aling</b>, sin embargo su efcto es basicamente el mismo. </p>
+                    <p>Cuenta con los siguites valores para definir la orientación del texto:</p>
+                    <ul>
+                        <li><p><b>ltr:</b> Este valor significa "left to right" es decir de izquierda a derecha</p></li>
+                        <li><p><b>rtl: </b> Este valor significa "right to left" es decir de derecha a izquierda</p></li>
+                    </ul>
+                    <h4>ejmplo</h4>
+                    <img src="img/direction.PNG" alt="">
+                </dd>
+                <dt id="letterSpacing"><h3>Letter Spacing</h3></dt>
+                <dd>
+                    <p>Esta propieda permite definir la separación entre las letras de un texto, esta propiedad acepta unidades de medidas como valor :</p>
+                    <h4>Ejemplo</h4>
+                    <img src="img/letterSpacing.PNG" alt="">
+                </dd>
+                <dt id="user-selected"><h3>User-selected</h3></dt>
+                <dd>
+                    <p>La función de esta propiedad es exclusibamente inpedir que el usuario pueda seleccionar un texto, para lograr esto es nesario aplicar un valor <b>none</b> en la propiedad.</p>
+                    <h4>Ejemplo</h4>
+                    <img src="img/user-selected.PNG" alt="">
+                </dd>
+                <dt id="text-shadow"><h3>Text-shadow</h3></dt>
+                    <dd>
+                        <p>Esta propiedad funciona exactamente igual que <b>box-shadow</b> salvo por dos diferencias, la primera es que esta propiedd se aplica al texto, y la segunda radica en que no es necesario introducir el valor del ancho del borde de la sombra, ya que los texto no tiene bordes, esta propiedd carece de ese dato.</p>
+                        <p>Aun así esta propiedad necesita de los otros valores para si correcto funcionamiento, esos valores son:</p>
+                        <ol>
+                            <li>
+                                <p>El primer valor a ingresar se trata de la ubicación de la sombra en el eje <b>X</b></p>
+                            </li>
+                            <li>
+                                <p>El segundo valor a ingresar se trata de la ubicación de la sombra en el eje <b>Y</b></p>
+                            </li>
+                            <li>
+                                <p>El tercer valor se trara del desenfoque, es decir el tamaño de la sombra</p>
+                            </li>
+                            <li>
+                                <p>El cuarto y ultimo valor consiste en el color de la sombra, aligual que otras propiedades esta acepta los diferentes formatos de color CSS</p>
+                            </li>
+                            <img src="./img/text-shadow.PNG" alt="">
+                        </ol>
+                        <p><b>Nota: Si se decea un efecto más intenso es posible repetir efecto las veces que hagan falta añadiendo nuevamente los valores siempre y caundo se respeten dos cosas, la primera es añadir una coma (,) entre cada repetición de los valores y la segunda es culminar la declaración de la propiedad con el punto y coma (;)</b></p>
+                        <img src="./img/notaText-shadow.PNG" alt="">
+                    </dd>
+                <h2>Extra</h2>
+                <dt id="color"><h3>Color</h3></dt>
+                <dd>
+                    <p>Realmente esta propiedad no se considera de texto sin embargo ya que al utilizar esta propiedad entre otras cosas el texto se ve afectado se podria nombrar en este apartado, despues de todo urilzar la propiedad <b>"color"</b> es la forma adecuada de seleccioar el color a utilizar para un texto. </p>
+                </dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Inportar Fuentes</h2>
+            <ol>
+                <li>
+                    <p>Para empezar hay que optener el link del archivo CSS que contenga la fuente deseada</p>
+                </li>
+                <li>
+                    <p>Procedemos a llamarlo desde el archivo HTML de la paguina utilizando una etiqueta "link"</p>
+                </li>
+                <li>
+                    <p>una ves llamado el archivo porcedemos a inplementarlo, para hacerlo simplemete aplicamos la porpiedad <b>"font-family"</b> en CSS con el respectivo nombre de la fuente importada</p>
+                </li>
+            </ol>
+            <p><b>Nota: siempre que se importe una fuente lo mejor es colocar una segunda fuente que actuara como un respaldo en el caso de que no se pueda acceder a la fuente principal, de la siguiete forma:</b></p>
+            <img src="./img/ejmInportarFuentes.PNG" alt="">
+            <p><b>Nota: Para evitar errores las fuentes estan sepadas por una coma (,) </b></p>
+        </section>
+    </main>
+</body>
+</html>

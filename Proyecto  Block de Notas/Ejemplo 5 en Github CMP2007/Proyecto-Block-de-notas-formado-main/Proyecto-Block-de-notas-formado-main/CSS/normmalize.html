@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalize</title>
+</head>
+<body>
+    <main>
+        <h1>Archivo Normalize</h1>
+        <section>
+            <p>Se trata de un archivo desxargable de GitHub para mejorar los estilos por defecto del navegador, se descarga desde <a href="https://necolas.github.io/normalize.css/">Normalize.css-GitHub</a>. Tambien se puede descargar directamente desde <a href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" download="normalize.css">la descarga directa</a> (seleccionar Guardar Como)</p>
+            <ul>
+                <li>
+                    <p>En este caso en el curso de CSS de "soyDalto" el recomendo: ir a la linea 148 o 152 aproximadamente del archivo, dentro del estilo de "img" añador la propiedad <b>"max-width: 100%;"</b> con el propisito de que las imagenes en los dispositivos moviles se ajusten a la pantalla u nunca la exceda.</p>
+                </li>
+                <li>
+                    <p>Tambien recomendo ir al incio del docuemto y en un estilo global (*) poner <b>"box-sizing: border-box;</b> así como un <b>padding: 0;</b> y un <b>margin: 0;</b> con el fin de que los elementos a los que se le añada un padding o otras propiedades de dimenciones no alteren las dimeciones establecidas por el desarrollador.</p>
+                    <p>Esto ya que por defecto en un navegador al declarar un elemento con por ejmplo unas dimeciones 50 X 50 y añadirle un paddig de 20 en la sona superior y inferior el navegador añadiria este padding a las dimenciones establecidas resultando en un elemento 50 X 50 que en realidad ocuparia 90 x 50  </p>
+                    <p>por lo tanto lo que hace este cambio es impedir que las dimenciones establecidas por el desarrollador sean modificadas por otras propiedades, por lo tanto continuando con este ejemplo al añadir el padding el elemento ya no seria de 90 X 50 si no que en cambio el padding se añadiria en el interior del elemento y no hacia el exterior manteniendo de ese modo las dimaciones establecidas de 50 X 50.</p>
+                    <p><b>Nota: al momento de pode rl margin y el paddig con un valor de 0 no se espesifica ninguna unidad ya que no es necesario, ya que todo número multiplicado por cero es cero por lo tanto en este caso no es necesario indicar ninguna unidad.</b></p>
+                </li>
+            </ul>
+            <h4>Como se menciono al principio del apartado el objetivo de incluir este documento en nuestros proyectos es mejorar la forma en la que el navegador implementa los estilos por defecto, y de esa forma evitar que surjan errores al desarrollar el proyecto.</h4>
+        </section>
+    </main>
+</body>
+</html>

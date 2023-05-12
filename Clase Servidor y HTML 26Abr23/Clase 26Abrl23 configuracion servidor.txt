@@ -1,0 +1,42 @@
+Diego Iacub9:42
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+Sebastian Menacho Cruz9:43
+buenos dias profe!!
+Diego Iacub9:50
+const path = require('path')
+Diego Iacub9:52
+res.sendFile(path.join(__dirname, 'index.html'))
+Diego Iacub9:53
+app.listen(3000, () => 
+    console.log("Servidor Corriendo")
+);
+Diego Iacub10:08
+http://localhost:3000
+
+http://localhost:3000
+Diego Iacub10:18
+http://localhost:3001/
+http://localhost:3000
+
+
+===============================================
+Diego Iacub10:32
+const path = require('path')
+const express = require('express')
+const app = express()
+
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'))
+})
+
+app.listen(3000, () => 
+    console.log("Servidor Corriendo")
+);

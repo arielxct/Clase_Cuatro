@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+</head>
+<body>
+    <main>
+        <h1>FlexBox</h1>
+        <article>
+            <section id="flex">
+                <p>Los elementos Flex estan cumpuestos por dos partes: el <b>flex-container</b> el cual es elemento padre el cual contiene a los <b>flex.item</b>  los cuales son los elementos hijos que se encuentran en su intenrior, en sí en los contenedores <b>flex</b> en cuanto a otros elementos externo se trata se comportan como un elemento de <b>block</b>, sin embargo las verdaderas particularides de este valor de <b>display</b> se encuentran en el comportamiento de los "item" dentro de dicho contenedor.</p>
+
+                <p>Para definir un contenedor <b>flex</b> simplemente es necesario declararlo como tal:</p>
+                <img src="../img/flexBox1.PNG" alt="">
+                <p>Una vez el contenedor es declarado <b>flex</b> puede acceder a diversas propiedades, entre las cuales se necuentra la adquisición de dos "ejes" internos llamados <b>"main axis"</b> y <b>"cross axis"</b>, los cuales en si no se tratan de dos ejes en todo el centido de la palabra, ya que cuentan con la particularidad de poseer una orientación:</p>
+                <ul>
+                    <li>
+                        <p><b>Main Axis:</b> Se trata del equivalente del eje <b>X</b> de un mapa carteciano, se encuentra direccionado de <b>izquierda a derecha </b> posellendo a su vez las secciones de <b>main-start</b> y <b>main-end</b></p>
+                    </li>
+                    <li>
+                        <p><b>Cross Axis:</b> Se trata del equivalente del eje <b>Y</b> de un mapa carteciano y se encuentra direccionado de <b>arriba hacia abajo</b> posellendo a su vez las secciones de <b>cross-start</b> y <b>cross-end</b></p>
+                    </li>
+               </ul>
+               <h4>Ejemplo</h4>
+               <img src="../img/orientacionEjexFlex.PNG" alt="">
+                <p>Estas seran las direcciones por defecto a la hora de trabajar con <b>flexBox</b>.</p>
+                <p><b>Nota: una de las caracteriticas de flexBox es que los elementos flex unicamente son el contenedor y sus hijos directos, por lo que el elemento hijo de un elemento hijo ya no forma parte del flexBox.</b></p>
+
+                <h3>Comportamiento</h3>
+                <p>Al definir un contenedor como <b>display: flex;</b> automaticamente este se comportata com un elemento de bloque para los elementos externos, mientras que sus items se alinearan uno junto a otro pero con la particularidad de que las dimaciones de estos mantendran una concordancia entre si, y para lograrlo los items ajustaran su alto y ancho junto a su contenido de modo que todos los items coincidan, en el  caso de que se defina un <b>height</b> o un <b>width</b> los items se ajustaran a este, pero si hay más items de los que caben en pantalla entonces estos modificaran sus dimenciones forma que todos puedan visualizarse en pantalla, este es el comportamiento por defecto de <b>flex</b> con el cual se puede lograr efectos como estos:</p>
+                <img src="../img/ejmFlexBox1.PNG" alt="">
+                <p>En este ejemplo se encuentran dos flex-items que apesar de la considerable diferencia en su contendio estos mantienen una misma altitud, este comportamiento se aplicara a todos los items <b>flex</b>, siempre y cuando su comportamiento por defecto este activado. </p>
+               
+                <section id="Contenedor">
+                    <h3>Propiedades del contenedor</h3>
+                    <p>Se tratran de aquellas propiedades que se deben aplicar al contenedor pero su efecto modificara el comportamiento de los items en su intenrior, estas son:</p>
+                    <dl>
+                        <dt id="flex-Direcction"><h3>Flex-Direction</h3></dt>
+                        <dd>
+                            <p>Esta propiedad permite definir la posición en la que se organizaran los items, es decir modifica la forma en la que estos se organizan en el <b>main-axis</b> o el <b>cross-axis</b>, debido a que existen dibersas formas de organizar los elementos la propiedad tiene multimples valores posblies: </p>
+                            <ul>
+                                <li>
+                                    <p><b>Row: </b> Se trata del valor por defecto de <b>flex</b>, este es el que define que todos los items se organise en fila es decir a lo largo del <b>main-axis</b> (eje X).</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/flex-direction.PNG" alt="">
+                                    <p><b>Resultado </b></p>
+                                    <img src="../img/ejmFlex.direction.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Row-reverse: </b> El efecto de este valor es invertir el oreden de los elementos del valor <b>row</b> es decir por defecto los items se organizaran de <b>main-start</b> a <b>main-end</b> (izquierda a derecha), con este valor lo haran empezando por el <b>main-end</b> hacia <b>main-start</b> (derecha a izquierda), por lo que el eje de los elementos no se modifica pero si lo hace su dirección</p>
+                                    <h4>Ejemplo</h4>
+                                    <img src="../img/flex-direction3.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Column:</b> Este valor define que todos los items se organisen en columna, es decir a lo largo del <b>cross-axis</b>, (eje Y).</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/flex-direction2.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmFlex.direction2.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Column-reverse: </b> El efecto de este valor es invertir el oreden de los elementos del valor <b>column</b> es decir por defecto los items se organizaran de <b>cross-start</b> a <b>cross-end</b> (arriba a abajo), con este valor lo haran empezando por el <b>cross-end</b> hacia <b>cross-start</b> (de abajo a arriba), por lo que el eje de los elementos no se modifica pero si lo hace su dirección</p>
+                                    <h4>Ejemplo</h4>
+                                    <img src="../img/flex-direction4.PNG" alt="">
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt id="wrap"><h3>Flex-Wrap</h3></dt>
+                        <dd>
+                            <p>El efecto de esta propiedad es indicar al navegador el como re-distribuir los items para los casos en que las dimenciones de pantalla sean inferiores a las necesarias para mostrar los items en las direcciones definidas por <b>flex.directon</b>., en otras palabras si la pantalla no cuenta con las dimenciones para mostrar los items con su <b>width</b> y <b>height</b> definidos, esta propiedad lo que hace es no permitir que se modifique las dimaciones del item, en su lugar lo re-ubica en otra zona de la pantalla, esta propiedad cuenta con tres valores los cuales son: </p>
+                            <ul>
+                                <li>
+                                    <p><b>Wrap:</b> Este es el valor por defecto de la propiedad cuando esta activada, su ejecto es el de <b>re-ubicar los items en una fila inferior a la actual</b>, cuando el espacio en pantalla sea inferior al necesario para mostrar los todos, de este modo no permite que la propiedad <b>flex</b> modifique las dimenciones de los items, en su lugar los re-ubica en la fila siguite </p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/flex-wrap1.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmFlex-wrap.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Wrap-reverse: </b> Este valor invierte la posicion en la que se re-ubican los items, <b>en vez de ubicarlos en una fila inferior lo hace en una fila superior a la actual</b></p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/flex-wrap2.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmFlex-wrap2.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Nowrap: </b> Este es el ultimo valor posible, y es el valor por defecto en los elementos, simplemente indica que la propiedad esta desactivada por lo tanto no se deben de reubicar los items en pantalla</p>
+                                    <h4>Ejemplo</h4>
+                                    <img src="../img/flex-wrap3.PNG" alt="">
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt id="flow"><h3>flex-Flow</h3></dt>
+                        <dd>
+                            <p>Esta propiedad es muy simple se trata de la propiedad de abrebiatura de <b>flex-direction</b> y de <b>flex-wrap</b>, su función simplemete es ecortar el codigo CSS definiendo ambas propiedades en una sola de la siguite manera:</p>
+                            <img src="../img/flex-flow.PNG" alt="">
+                            <b><p>En sí no ofrese ningun otro efecto más alla de este, en incluso su uso se recomienda limitarlo a los casos en los que realmete sea necesario definir en <b>flex-direction</b> y <b>flex-wrap</b> un valor diferente al seleccionado por defecto, ya que de lo contrario realmete no sale a cuenta su uso. </p></b>
+                        </dd>
+                        <dt id="justify-content"><h3>Justify-content</h3></dt>
+                        <dd>
+                            <p>ESta propiedad define la forma en la que se alinean los diferentes items de un contenedor dentro del <b>main axis</b>, para esto cuanta con dibersos valores:</p>
+                            <ul>
+                                <li>
+                                    <p><b>Center: </b> Este valor define que todos los elementos se junten en el cantro de la pantalla</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/justify-content1.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmJustify-content.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Space-around: </b> Este valor define que se distribuira el espacio disponible de forma aquitativa alrededor de todos los elementos.</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/justify-content2.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmJustify-content2.PNG" alt="">
+                                    <p>Su efecto puede ser parecido al de <b>margin: auto;</b> sin embargo el uso de esta propiedad es más combeneinte no solo porque engona mejor con las demás propiedades <b>flex</b> si no que de este modo tambien se mantiene la propiedad <b>margin</b> libre para su uso en los items si es necesario.</p>
+                                    <p><b>Nota: Entre los items se encuentra más espacio que en los bordes ya que allí se unen el espacio correspondiente a cada item, es muy similar a cuando se aplica un margen, esdecir los margenes de ambos elementos se distancian entre sí aumentando el espacio entre los elementos.</b></p>
+                                </li>
+                                <li>
+                                    <p><b>Space-between: </b> Este valor deja la mayor cantidad de espacio disponible entre los items</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/justify-content3.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmJustify-content3.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Space-venly: </b> Este valor deja la misma cantidad de espacio alrededor de cada item sin importar se este se encuentra entre dos itmes o si se enceuntra en alguno de los extremos, simpre sera la misma distancia</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/justify-content4.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmJustify-content4.PNG" alt="">
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt id="align-items"><h3>Align-items</h3></dt>
+                        <dd>
+                            <p>Esta propiedad define la forma en la que se alinean los items dentro del <b>cross axis</b>, para lo cual posee dibersos valores</p>
+                            <p><b>Nota: esta propiedad unicamente se utiliza cuando solo existe una unica fila de items.</b></p>
+                            <ul>
+                                <li>
+                                    <p><b>Center: </b> Tal como su nombre lo indica este valor centro los elementos dentro del <b>cross axis</b>, es decir centra los elementos verticalmete</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/align-items1.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmAlign-items1.PNG">
+                                </li>
+                                <li>
+                                    <p><b>Flex-end: </b> Este valor ubica los items en la zona inferior del contenedor, es decir envia al fondo a los items cotenedor</p>
+                                    <p><b>Codigo</b></p>
+                                    <img src="../img/align-items2.PNG" alt="">
+                                    <p><b>Resultado</b></p>
+                                    <img src="../img/ejmAlign-items2.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>flex-start: </b> Este valor ubica a los items en la zona superior del contenedor</p>
+                                    <h4>Ejemplo</h4>
+                                    <img src="../img/align-items3.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Stretch: </b> Este valor ubica los items al comienzo de contenedor pero con la particularidad de que estira los items a lo alto de todo el contenedor, para que de ese modo estos cubran todo el espacio disponible en el <b>cross axis</b></p>
+                                        <p><b>Codigo</b></p>
+                                        <img src="../img/align-items4.PNG" alt="">
+                                        <p><b>Resultado</b></p>
+                                        <img src="../img/ejmAlign-items4.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Baseline: </b> Se trata de un valor que realmente tiene poco uso ya que no aporta nada relevante que no aporten los otros, sin embago un buen eso para este es para cuando se desea lograr que los items ubicados en fila se re-ubiquen hacia una fila superior, para esto se utiliza <b>flex-wrap: wrap-reverse;</b> en conjunto con <b>align-items: baseline;</b> para lograrlo, juera de este efecto en particular el valor <b>baseline</b> escasea en su uso.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt id="align-content"><h3>Align-content</h3></dt>
+                        <dd>                        
+                            <p>Para estos casos se utiliza <b>align-content</b> cuyo efecto es re-ubicar a los items en la siguiente fila inmedianta junta a la actual, En otras palabras <b>Align-content es una propiedad cuya función y valores son identicos a los de align-items, con la diferencia de que al existir multiples filas de items esta propiedad las mantiene ordenadas justo debajo (o encima) de la fila actual:</b></p>
+                            <p><b>Codigo</b></p>
+                            <img src="../img/align-content1.PNG" alt="">
+                            <p><b>Resultado</b></p>
+                            <img src="../img/ejmAlign-content1.PNG" alt="">
+                            <p>A diferencia de <b>Align-items ya que esta al encontrar más de una fila de items los distribuye de forma uniforme a lo largo de todo el espacio disponible:</b></p>
+                            <img src="../img/ejmAlign-items5.PNG" alt="">
+                            <p>Altratarse de una propiedad tremendamente parecida a <b>align-items</b> cuanta con los mismos valores y efectos que esta, solo que con la particularidad de poder controlar mejor multiples filas de elementos, los valores de esta propiedad son:</p>
+                            <ul>
+                                <li><p><b>Center</b></p></li>
+                                <li><p><b>Flex-end</b></p></li>
+                                <li><p><b>flex-start</b></p></li>
+                                <li><p><b>Stretch</b></p></li>
+                                <li><p><b>Baseline</b></p></li>
+                            </ul>
+                            <p><b>Nota: ya que los efectos de sus valores son los mismos no es necesarios volver a explicarlos.</b></p>
+                        </dd>
+                    </dl>
+                </section>
+                <section>
+                    <h2>Propiedades de los items</h2>
+                    <p>Se tratan de aquellas propiedades que se aplican al directamente al <b>flex item</b>.</p>
+                    <dl>
+                        <dt id="align-self"><h3>Align-self</h3></dt>
+                        <dd>
+                            <p>Esta Propiedad es exactamete como <b>align-items</b> o <b>align-content</b>, ya que la función de esta propiedad es definir una alineación unicamente para alguno de los items en particular, por ello es que se le define a dicho elemento, en si esta propiedad permite el despasamiento del item a lo largo del <b>cross axis</b>, y sus valores son identicos a los de <b>align-items</b> y <b>align-content</b>. </p>
+                            <ul>
+                                <li><p><b>Center</b></p></li>
+                                <li><p><b>Flex-end</b></p></li>
+                                <li><p><b>flex-start</b></p></li>
+                                <li><p><b>Stretch</b></p></li>
+                                <li><p><b>Baseline</b></p></li>
+                            </ul>
+                            <h4>Ejemplo</h4>
+                            <img src="../img/align-self.PNG" alt="">
+                        </dd>
+                        <dt id="margin"><h3>Margin</h3></dt>
+                        <dd>
+                            <p>Los elementos <b>flex</b> cuentan con una particularidad en el comportamiento de la propiedad <b>margin</b>, espesificamete cuando se aplica el valor <b>auto</b>, ya que en estos casos por defecto el navegador dejara todo el espacio disponible en la dirección en la que se le esta aplicando el margen, es decir si se define la propiedad <b>margin-top: auto</b> en el item, este se desplazara a la parte inferior del contenedor, ya que el valor <b>auto</b> en un elemento <b>flex</b> dara el margen maximo posible en la dirección que indique la propiedad. </p>
+                            <p><b>Codigo</b></p>
+                            <img src="../img/marginFlex1.PNG" alt="">
+                            <p><b>Resultado</b></p>
+                            <img src="../img/ejmMarginFlex.PNG" alt="">
+                            <p>De este modo es posible centrar el item vertical o orizontalmente utilizando dos propiedades <b>marguin: auto</b> del mismo eje (margin-left y margin-right o margin-top y margin-bottom), esto ya que al entrar en conflicto dos propiedades <b>margin: auto</b> en el mismo eje, el navegador lo resuleve dejando la mitad del espcio disponible a cada cara del item, otra opción es generalizar el valor <b>auto</b> al marguen de todas las caras del item para ubicarlo en el cantro de todo el contenedor de la siguite forma:  </p>
+                            <p><b>Codigo</b></p>
+                            <img src="../img/marginFlex2.PNG" alt="">
+                            <p><b>Resultado</b></p>
+                            <img src="../img/ejmMarginFlex2.PNG" alt="">
+                            <p><b>Nota: Tambien es posible aplicar la abrebiatura de la propiedad de la siguiente forma </b></p>
+                            <img src="../img/marginFlex3.PNG" alt="">
+                            <p><b>Nota; este comportamiento es particular de los items dentro de contenedores flex, fuera de estos la propiedad margin se comporta con normalidad. </b></p>
+                        </dd>
+                        <dt id="flex-grow"><h3>Flex-grow</h3></dt>
+                        <dd>
+                            <p>Esta propiedad define que todo el espcio sobrante en el contenedor se distribuyan entre los items de este, es decir las dimeciones de los items se modificaran en función del espacio disponible en el contenedor, si el espacio aumeta los itmes se agrandaran o reduciran para ocupar ese espacio.</p>
+                            <p><b>Codigo</b></p>
+                            <img src="../img/flex-grow1.PNG" alt="">
+                            <p><b>Resultado</b></p>
+                            <img src="../img/ejmflex-grow1.PNG" alt="">
+                            <p>En este ejmplo los items tienen definido un <b>height: 100px</b> pero al aplicarse la propiedd <b>flex-grow: 1</b> los items se agrandan para abarcar ese esoacio, lo que en realidad no permite la propiedd <b>height</b> es que el item se reduzaca a un tamaña inferiro a esas 100px que tiene definido, por lo tanto al definirse una propiedad de dimeciones en un item con <b>flex-grow</b> este elemento modificara sus dimeciones en función del espacio disponible, pero nunca se reduciran a un tamaño inferior al definido en sus propiedades de dimaciones. </p>
+                            <p>De este mismo modo sepuede aplicar esta propiedad a algunos items y aotros no, el resultado es que solo aquellos que posean la propiedad dispondran del espacio sobrante, de la siguite forma:</p>
+                            <img src="../img/flex-grow2.PNG" alt="">
+                            <p>Por ultimo es posble definir la cantidad de espacio que se le asignara a cada item, esto se define con el valor numerico que se asigne a la propiedad, ya que el espacio sobrante se dibide por la suma de todos los numeros que se asignen en las todas las porpiedades <b>flex-grow</b> del <b>flexBox</b> de la siguite manera:</p>
+                            <img src="../img/flex-grow3.PNG" alt="">
+                            <p>En este ejmplo lo que sucede es que el espacio sobrante se dibide en tres (3) ya que este es el valor de la suma de todas las propiedades <b>flex-grow</b> en el cual dos (2) corresponde a la clase ".orange" y uno (1) corresponde a la clase ".green",por lo tanto el espacio se dibide en tres secciones de las cuales dos (2) le corresponden a ".orange" y una(1) le corresponde a ".green", de la siguite forma: </p>
+                            <img src="../img/ejmflex-grow2.PNG" alt="">
+                            <p><b>Nota: Esta propiedad acepta decimales.</b></p>
+                        </dd>
+                        <dt id="flex-shrink"><h3>Flex-shrink</h3></dt>
+                        <dd>
+                            <p>Esta propieda lo que define es la cantidad de espacio que sedera cada item para ajustarse a las medidas de la pantalla, es decir esta propiedad define el si alguno de los items tendra que seder una cantidad de espacio mayor o igual de espacio que otro, a medida que la pantalla se reduce.  </p>
+                            <p>Para esto se asigna un valor numerico el cual  define la cantidad de veces que un item se reducira su espacio, es decir un item con por ejemplo, un valor de tres (3) tendra que seder tres (3) veces más de espacio que aquel item que posea un valor de uno (1). </p>
+                            <img src="../img/flex-shrink.PNG" alt="">
+                            <p>En otras palabras el valor numerico define la cantidad de porciones de espacio que el elemento tendra que ceder, por lo que si se defiine con "0" ese item no sedera nada de espacio, una vez el item alcanse si width definido.</p>
+                            <p><b>Nota: Esta propiedad acepta decimales.</b></p>
+                            <p><b>Nota: Esta propiedad tiende al infinito, eso quere decir que se puede definir con un valor de "0" seguido de 10 decimales y de igual forma el navegador lo tendra en cuenta.</b></p>
+                        </dd>
+                        <dt id="flex-basis"><h3>Flex-basis</h3></dt>
+                        <dd>
+                            <p>Esta porpiedad es exclusiva de <b>flexBox</b>, su función es identica a la de la propiedad <b>width</b>, con la diferencia de que cuanta con más prioridad que esta, por lo que en el caso de que el navegador tenga que elejir las dimenciones de un item entre estas dos propiedades siempre elejira el <b>flex-basis</b>, a su vez <b>width</b> nunca podra sobre escribir a <b>flex-basis</b>.</p>
+                            <h4>Ejemplo</h4>
+                            <img src="../img/flex-basis.PNG" alt="">
+                            <b><p>Su uso es más recomendable que width ya que se trata de una propiedad espesifica para las flexBox, cuenta con una mayor gerarquia que esta y tambien tiene la opción de ser conbinada con otras propiedades.</p></b>
+                        </dd>
+                        <dt id="flex"><h3>Flex</h3></dt>
+                        <dd>
+                            <p>Se trata de la propiedad de abrebiatura de <b>flex-grow</b>, <b>flex-shrink</b> y <b>flex-basis</b>, por lo tanto la unica función de esta propiedad es la de reducir y optimizar el codigo CSS, la estructura de esta dicta que:</p>
+                            <ol>
+                                <li><p><b>El primer valor corresponde a flex-grow</b></p></li>
+                                <li><p><b>El segundo valor corresponde a flex-shrink</b></p></li>
+                                <li><p><b>El tercer valor corresponde a flex-basis</b></p></li>
+                            </ol>
+                            <h4>Ejemplo</h4>
+                            <img src="../img/flex.PNG" alt="">
+                            <p><b>Nota: Para funcionar esta propiedad necesita obligatoriamente almenos un parametro, (el primero corresponde a flex-grow).</b></p>
+                        </dd>
+                        <dt id="order"><h3>Order</h3></dt>
+                        <dd>
+                            <p>Esta propiedad se asemeja mucho al <b>z-index</b>, propiedad que define que elemento se bisualizara por encima o por debajo cuando estos se sobreponen entre si, esto lo hace en base al valor numerico que se le asigna a cada elemento, en el cual el más grande se ubica por encima de los otros. </p>
+                            <p>Por su lado <b>order</b> lo que hace es definir en que orden se ubican los elementos enbase a la dirección del <b>main axis</b>, es decir esta propiedad define el si los items se ubican de primero, segundo, cuarto, ultimo etc, en base al valor numerico que se le asigne a cada item al igual que en la propiedad <b>z-index</b>. En esta propiedad el item con el <b>menor valor</b> se ubica en el <b>inicio del main axis</b>, mientras que el item con el <b>mayor valor</b> lo hace en el <b>final del main axis</b>, esto es indiferente el si los items tiene una <b>flex-direction: row; </b> o una <b>flex-direction: column;</b> (Si se utiliza "column" entonces los items pasan a organizarse en el cross axis). </p>
+                            <p><b>Codigo</b></p>
+                            <img src="../img/order.PNG" alt="">
+                            <p><b>Row</b></p>
+                            <img src="../img/ejmOrder1.PNG" alt="">
+                            <p><b>Column</b></p>
+                            <img src="../img/ejmOrder2.PNG" alt="">
+                            <p><b>Nota: Recordar que los valores row-reverse y column-reverse invierten lo ejes por lo que con estos valores los items se organizaran en función a las nuevas direcciones de los ejes</b></p>
+                        </dd>
+                    </dl>
+                </section>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
